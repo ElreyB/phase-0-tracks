@@ -1,9 +1,27 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>Form</title>
+  <title>Meal Form</title>
 </head>
 <body>
+  <h1>Please, fill out the form for your in flight meal:</h1>
 
+    <form action="success.html" method="post">
+      Full Name: <input type="text" name="passenger name"><br>
+      Seat Number: <input type="text" name="seat number"><br>
+      Allergies: <input type="text" name="allergies"><br>
+
+      Meal Preference: <select meal="meal">
+                        <option value="meat">Meat</option>
+                        <option value="chicken">Chicken</option>
+                        <option value="fish">Fish</option>
+                        <option value="vegetarian">Vegetarian</option>
+                        <option value="vegan">Vegan</option>
+                        <option value="none">None</option>
+                      </select><br>
+      <textarea name="textarea" rows="12" cols="40">If there are any other special request let us know here</textarea><br>
+      <button type="button">Submit</button>
+    </form>
+    
 </body>
 </html>
