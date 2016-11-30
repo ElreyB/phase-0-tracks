@@ -1,0 +1,20 @@
+section#contact-info {
+	font-size: .8em;
+}
+
+.job {
+	background-color: #e9e5dc;
+	border-radius: 20px;
+	padding: 10px 5px;
+	margin-top: 5px;
+	margin-bottom: 5px;
+}
+
+.list {
+	font-size: .8em;
+}
+/* Our example of how to select a child element*/
+
+#work-experience .job .list .featured {
+	font-size: 5em;
+}
