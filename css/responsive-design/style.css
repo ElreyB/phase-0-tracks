@@ -44,3 +44,27 @@ body {
   width: 960px;
 }
 
+@media screen and (max-width: 500px) {
+  body {
+    background-color: hotpink;
+  }
+}
+
+@media screen and (min-width: 501px) {
+    body {
+        background-color: lightgreen;
+    }
+}
+
+@media screen and (max-width: 600px) {
+    main {
+        max-width: 100%;
+        display: block;
+    }
+
+    #external-links {
+        max-width: 100%; 
+        display: block;
+    }
+}
+
