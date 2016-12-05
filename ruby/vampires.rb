@@ -13,11 +13,14 @@ else
   age = false 
 end
 
-	
 print "Our company cafeteria serves garlic bread. Should we order some for you? (y/n)\n"
-	order_bread = gets.chomp
+	bread_order = gets.chomp.downcase
+	bread_order = bread_order == "y"
+
 print "Would you like to enroll in the company's health insurance? (y/n)\n"
-	insurance = gets.chomp
+	insurance = gets.chomp.downcase
+	insurance = insurance == "y"
+
 
 
 
