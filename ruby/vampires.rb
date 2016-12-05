@@ -21,13 +21,18 @@ print "Would you like to enroll in the company's health insurance? (y/n)\n"
 
 detect = "Results inconclusive"
 if age && (bread_order || insurance)
-	puts "Probably not a vampire."
+	detect = "Probably not a vampire."
 end
 if !age && (bread_order || insurance)
-	puts "Probably a vampire."
+	detect = "Probably a vampire."
 end
 if !age && !bread_order && !insurance
-	puts "Almost certainly a vampire."
+	detect = "Almost certainly a vampire."
 end
+if (employee_name == "Drake Cula") || (employee_name == "Tu Fang")
+	detect = "Definitely a vampire."
+end
+
+puts detect
 
 
