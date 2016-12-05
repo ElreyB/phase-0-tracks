@@ -1,0 +1,59 @@
+Elevator Robot:
+
+Start in front of the elevator. 
+	If the floor you want to go to is greater than the floor you are on
+		push the up button
+	If it is less than the floor you are on
+		push the down button
+	Otherwise, turn around. You are on the floor you want.
+When the elevator door opens 
+	If there are people inside 
+		wait for them to exit then step inside the elevator
+	If there are people inside
+		but no one exits then step inside the elevator
+	Otherwise, move forward into the elevator.
+Turn to face the elevator buttons. 
+Push the number of the button equal to the floor you want to go to
+	If there are people inside 
+		take one step back
+	Otherwise, take two steps back.
+Wait for the elevator door to open on the floor you want to go to
+	If the door opens on the floor you want
+		Step out of the elevator
+	Otherwise, stay were you are
+
+
+Making Coffee:
+
+Start in front of the kitchen.
+	If your husband has set up the electric kettle, grinder, french press, and mug
+		Then start the electric kettle and start the grinder
+	When the electric kettle is done
+		Pour ground coffee into french push 
+		Then pour hot water into french press
+		Put french press lid on top of french press
+		Then press down
+	Wait 5 minutes
+		Pour coffee in to mug and enjoy your black coffee
+		
+	Otherwise, get the electric kettle from the lower right cabinet, fill it with water, plug it in and turn it on
+	While the water is heating up
+		Get the grinder from the lower right cabinet and the coffee from the 
+		upper right cabinet three feet in front of you
+	Step three feet back
+		Put whole coffee beans in grinder
+		Plug grinder in and turn on 
+		Return whole coffee beans to upper right cabinet three feet in front of 
+		you
+	Step three feet back
+	Grab mug and french press from upper right cabinet and set them next to grinder
+		Turn grinder on
+	When grinder is has stop 
+		Pill lid off of the french press 
+		Pour ground coffee beans into french press
+	When electric kettle is done
+		Pour hot water into french press
+		Put french press lid on top of french press
+		Then press down
+	Wait 5 minutes
+		Pour coffee in to mug and enjoy your black coffee
