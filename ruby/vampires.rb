@@ -21,6 +21,8 @@ print "Would you like to enroll in the company's health insurance? (y/n)\n"
 	insurance = gets.chomp.downcase
 	insurance = insurance == "y"
 
-
-
+detect = "Results inconclusive"
+if age && (bread_order || insurance)
+	puts "Probably not a vampire."
+end
 
