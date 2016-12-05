@@ -25,4 +25,7 @@ detect = "Results inconclusive"
 if age && (bread_order || insurance)
 	puts "Probably not a vampire."
 end
+if !age && (bread_order || insurance)
+	puts "Probably a vampire."
+end
 
