@@ -9,8 +9,6 @@ if 2016 - employee_birth_year == employee_age
   age = true
 elsif 2016 - employee_birth_year == employee_age + 1
   age = true
-else
-  age = false 
 end
 
 print "Our company cafeteria serves garlic bread. Should we order some for you? (y/n)\n"
@@ -28,4 +26,5 @@ end
 if !age && (bread_order || insurance)
 	puts "Probably a vampire."
 end
+if !age
 
