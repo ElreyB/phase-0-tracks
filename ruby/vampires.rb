@@ -26,5 +26,8 @@ end
 if !age && (bread_order || insurance)
 	puts "Probably a vampire."
 end
-if !age
+if !age && !bread_order && !insurance
+	puts "Almost certainly a vampire."
+end
+
 
