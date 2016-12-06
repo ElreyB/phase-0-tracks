@@ -1,3 +1,8 @@
+print "How many employees will be processed today?\n"
+	employees = gets.chomp.to_i
+
+until employees == 0 
+
 print "What is your name?\n"
 	employee_name = gets.chomp
 print "How old are you?\n"
@@ -34,5 +39,8 @@ if (employee_name == "Drake Cula") || (employee_name == "Tu Fang")
 end
 
 puts detect
+
+employees -= 1
+end
 
 
