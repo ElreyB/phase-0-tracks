@@ -38,6 +38,21 @@ if (employee_name == "Drake Cula") || (employee_name == "Tu Fang")
 	detect = "Definitely a vampire."
 end
 
+vampire = "sunshine"
+allergies = 
+
+while allergies != "done"
+print "Please list any allergies you may have. Type 'done' when finished."
+	allergies = gets.chomp.downcase
+	if allergies == vampire
+		detect = "Probably a vampire."
+		break
+	end
+	if allergies == "done"
+		break
+	end
+end
+
 puts detect
 
 employees -= 1
