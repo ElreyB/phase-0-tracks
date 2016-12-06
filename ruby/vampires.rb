@@ -42,7 +42,7 @@ vampire = "sunshine"
 allergies = 
 
 while allergies != "done"
-print "Please list any allergies you may have. Type 'done' when finished."
+puts "Please list any allergies you may have. Type 'done' when finished."
 	allergies = gets.chomp.downcase
 	if allergies == vampire
 		detect = "Probably a vampire."
@@ -57,5 +57,7 @@ puts detect
 
 employees -= 1
 end
+
+print "Actually, never mind! What do these questions have to do with anything? Let's all be friends.\n"
 
 
