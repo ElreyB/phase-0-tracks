@@ -1,3 +1,19 @@
-body {
-	background-color: blue;
+section.column-1{
+  background-color:blue;
+  display: inline-block;
+  vertical-align: top;
+  max-width: 45%;
+  font-family: "Arial", sans-serif, serif;
+  heigth: 100px;
+
 }
+section.column-2{
+  background-color: red;
+  display: inline-block;
+  vertical-align:top;
+  max-width: 45%;
+  font-family: "Courier New", monospace;
+  heigth: 150px;
+  padding-bottom: 28px;
+}
+
