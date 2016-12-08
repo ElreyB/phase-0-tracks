@@ -46,5 +46,9 @@ p encrypt("zed")
 p decrypt("bcd")
 p decrypt("afe")
 
+p decrypt(encrypt("swordfish"))
+# Because of order of operation, the value of encrypt is return first, then 
+#that value is used for the argument of decrypt 
+
 
 
