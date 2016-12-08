@@ -41,14 +41,29 @@ end
 
 # p decrypt("boy") # --> anx
 
-p encrypt("abc")
-p encrypt("zed")
-p decrypt("bcd")
-p decrypt("afe")
+# p encrypt("abc")
+# p encrypt("zed")
+# p decrypt("bcd")
+# p decrypt("afe")
 
-p decrypt(encrypt("swordfish"))
+# p decrypt(encrypt("swordfish"))
 # Because of order of operation, the value of encrypt is return first, then 
 #that value is used for the argument of decrypt 
+
+print "Agent, would you like to encrypt or decrypt a password?\n"
+	input = gets.chomp.downcase
+
+print "Type in your password: \n"
+	password = gets.chomp.downcase
+
+	if input == "encrypt"
+		password = encrypt(password)
+	elsif input == "decrypt"
+		password = decrypt(password)
+	end
+
+print "Your #{input + "ed"} password is '#{password}'.\n"
+
 
 
 
