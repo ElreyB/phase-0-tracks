@@ -5,8 +5,11 @@ def encrypt(string)
 counter = 0
 # counter starter number
 	while counter < string.length 
-		string[counter] = string[counter].next
-
+		if string[counter] == "z"
+			string[counter] = "a"
+		else
+			string[counter] = string[counter].next
+		end
 		#string = ally
 		#string.length = 4 
 		#string[0] = a --> b 
