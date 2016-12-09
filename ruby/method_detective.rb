@@ -34,8 +34,11 @@ p "Used negitive to insert".insert(-10, "number ")
 
 puts "-----------"
 
-# " suspects".<???>
-# => "the usual suspects"
+p " suspects".insert(0, "the usual")
+# => "the usual suspects" 
+p " idea".insert(0, "you get").insert(-6, " the")
+
+puts "-----------"
 
 # "The case of the disappearing last letter".<???>
 # => "The case of the disappearing last lette"
