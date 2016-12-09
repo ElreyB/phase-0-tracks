@@ -57,9 +57,13 @@ p "That      looks   much     better.".squeeze(" ")
 
 puts "-----------"
 
-# "z".<???>
+p "z".ord
 # => 122 
 # (What is the significance of the number 122 in relation to the character z?)
+#122 is the ordinal number of lowercase z in the ASCII table.
+p "5".ord
+
+puts "-----------"
 
 # "How many times does the letter 'a' appear in this string?".<???>
 # => 4
