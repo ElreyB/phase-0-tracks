@@ -3,7 +3,6 @@
 
 # When there's more than one suspect who could have
 # committed the crime, add additional calls to prove it.
-
 p "iNvEsTiGaTiOn".swapcase
 # => “InVeStIgAtIoN”
 p "Elrey C. Belmonti".swapcase
@@ -51,8 +50,12 @@ p "The mystery of the missing first letter".slice(1..-1)
 p "Why can't I learn Ruby.".slice(10..-1)
 
 puts "-----------"
-# "Elementary,    my   dear        Watson!".<???>
+
+p "Elementary,    my   dear        Watson!".squeeze(" ")
 # => "Elementary, my dear Watson!"
+p "That      looks   much     better.".squeeze(" ")
+
+puts "-----------"
 
 # "z".<???>
 # => 122 
