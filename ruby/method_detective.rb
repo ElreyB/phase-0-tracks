@@ -28,8 +28,11 @@ p "i want to say something really important!!!!".upcase
 
 puts "-----------"
 
-# "the usual".<???>
+p "the usual".insert(-1, " suspects")
 #=> "the usual suspects"
+p "Used negitive to insert".insert(-10, "number ")
+
+puts "-----------"
 
 # " suspects".<???>
 # => "the usual suspects"
