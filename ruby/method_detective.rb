@@ -65,5 +65,10 @@ p "5".ord
 
 puts "-----------"
 
-# "How many times does the letter 'a' appear in this string?".<???>
+p "How many times does the letter 'a' appear in this string?".count("a")
 # => 4
+p "supercalifragilisticexpialidocious".count("i")
+
+puts "-----------"
+
+
