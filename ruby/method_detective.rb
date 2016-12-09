@@ -8,8 +8,13 @@ p "iNvEsTiGaTiOn".swapcase
 # => “InVeStIgAtIoN”
 p "Elrey C. Belmonti".swapcase
 
-# "zom".<???>
+puts "-----------"
+
+p "zom".insert(1, 'o')
 # => “zoom”
+p "Flower".insert(6, ' Power')
+
+puts "-----------"
 
 # "enhance".<???>
 # => "    enhance    "
