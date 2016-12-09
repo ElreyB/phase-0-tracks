@@ -46,9 +46,11 @@ p "Y of my name is gone, Elrey".chop
 
 puts "-----------"
 
-# "The mystery of the missing first letter".<???>
+p "The mystery of the missing first letter".slice(1..-1)
 # => "he mystery of the missing first letter"
+p "Why can't I learn Ruby.".slice(10..-1)
 
+puts "-----------"
 # "Elementary,    my   dear        Watson!".<???>
 # => "Elementary, my dear Watson!"
 
