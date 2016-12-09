@@ -22,8 +22,11 @@ p "I am in the center".center(30)
 
 puts "-----------"
 
-# "Stop! You’re under arrest!".<???>
+p "Stop! You’re under arrest!".upcase
 # => "STOP! YOU’RE UNDER ARREST!"
+p "i want to say something really important!!!!".upcase
+
+puts "-----------"
 
 # "the usual".<???>
 #=> "the usual suspects"
