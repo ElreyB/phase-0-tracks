@@ -40,8 +40,11 @@ p " idea".insert(0, "you get").insert(-6, " the")
 
 puts "-----------"
 
-# "The case of the disappearing last letter".<???>
+p "The case of the disappearing last letter".chop
 # => "The case of the disappearing last lette"
+p "Y of my name is gone, Elrey".chop
+
+puts "-----------"
 
 # "The mystery of the missing first letter".<???>
 # => "he mystery of the missing first letter"
