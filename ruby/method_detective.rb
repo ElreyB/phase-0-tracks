@@ -16,8 +16,11 @@ p "Flower".insert(6, ' Power')
 
 puts "-----------"
 
-# "enhance".<???>
+p "enhance".center(15)
 # => "    enhance    "
+p "I am in the center".center(30)
+
+puts "-----------"
 
 # "Stop! You’re under arrest!".<???>
 # => "STOP! YOU’RE UNDER ARREST!"
