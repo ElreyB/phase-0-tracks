@@ -60,6 +60,7 @@ thanks = "Thank you! You will be contacted soon."
 puts "What information would you like to change?\nIf there is nothing to change, type 'none'."
 	change = gets.chomp.downcase
 	if change == 'none'
+		puts "---------------------------"
 		puts thanks
 	else
 		if change == "full name"
@@ -84,7 +85,11 @@ puts "What information would you like to change?\nIf there is nothing to change,
 					new_how_many = "N/A"
 				end
 			new_client[:kids] = new_kids	
-			new_client[:number_of_kids]	= new_how_many	
+			new_client[:number_of_kids]	= new_how_many
+		elsif change == "number of kids"
+			puts "How many?"
+			new_how_many = gets.chomp.to_i
+			new_client[:number_of_kids]	= new_how_many			
 		end
 	puts new_client
 	puts "---------------------------"
