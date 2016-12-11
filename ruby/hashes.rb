@@ -66,7 +66,10 @@ puts "What information would you like to change?\nIf there is nothing to change,
 			puts "What is you full name?"
 			new_full_name = gets.chomp
 			new_client[:full_name] = new_full_name
-		elsif change == ""
+		elsif change == "phone number"
+			puts "What is your phone number?"
+			new_phone_number =gets.chomp.to_i
+			new_client[:phone_number] = new_phone_number
 			
 					
 		end
