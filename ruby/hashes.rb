@@ -52,9 +52,17 @@ p new_client
 #Prompt user which data they wish to change
 	# if the user writes 'none' skip
 	#but if user wants to change data
+		#Ask for new value
 		#update data
 		#print updated hash
-puts 
+thanks = "Thank you and you will be contacted shortly."
+puts "What information would you like to change?\nIf there is nothing to change, type 'none'."
+	change = gets.chomp.downcase
+	if change == "full name"
+		puts "What is you full name?"
+		new_full_name = gets.chomp
+
+
 
 #Exit program
 
