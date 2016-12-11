@@ -8,7 +8,12 @@ puts "What is you full name?"
 puts "What is your phone number?"
 	phone_number = gets.chomp.to_i
 puts "What is you email address?"
-	email = gets.chomp
+	email = gets.chomp.to_s
+put "Do you have kids? (Y/N)"
+	kids = gets.chomp
+		if kids == "Y"
+			puts "How many?"
+				how_many = gets.chomp
 
 
 #print hash
