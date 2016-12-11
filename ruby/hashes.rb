@@ -70,6 +70,11 @@ puts "What information would you like to change?\nIf there is nothing to change,
 			puts "What is your phone number?"
 			new_phone_number =gets.chomp.to_i
 			new_client[:phone_number] = new_phone_number
+		elsif change == "email"
+			puts "What is you email address?"
+			new_email = gets.chomp
+			new_client[:email] = new_email
+				
 			
 					
 		end
