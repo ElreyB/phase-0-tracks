@@ -4,11 +4,11 @@
 #Convert input to the appropriate data type
 puts "Please anwser the following questions:"
 puts "What is you full name?"
-	full_name = gets.chomp.to_s
+	full_name = gets.chomp
 puts "What is your phone number?"
 	phone_number = gets.chomp.to_i
 puts "What is you email address?"
-	email = gets.chomp.to_s
+	email = gets.chomp
 puts "Do you have kids? (Y/N)"
 	kids = gets.chomp.upcase
 		if kids == "Y"
@@ -18,7 +18,7 @@ puts "Do you have kids? (Y/N)"
 			how_many = nil
 		end
 puts "What decor theme would you like?"
-	decor_theme = gets.chomp.to_s
+	decor_theme = gets.chomp
 puts "--------------------------"
 
 p full_name
