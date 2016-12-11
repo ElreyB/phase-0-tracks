@@ -40,14 +40,15 @@ new_client = {
 	theme: decor_theme
 }
 p new_client
+puts "---------------------------"
  puts "Full Name: #{new_client[:full_name]}"
  puts "Phone Number: #{new_client[:phone_number]}"
  puts "Email: #{new_client[:email]}"
  puts "Kids: #{new_client[:kids]}"
  puts "Number of kids: #{new_client[:number_of_kids]}"
  puts "Client's ideal theme: #{new_client[:theme]}"
+puts "--------------------------"
 
- puts "--------------------------"
 
 #Prompt user which data they wish to change
 	# if the user writes 'none' skip
@@ -55,12 +56,31 @@ p new_client
 		#Ask for new value
 		#update data
 		#print updated hash
-thanks = "Thank you and you will be contacted shortly."
+thanks = "Thank you! You will be contacted soon."
 puts "What information would you like to change?\nIf there is nothing to change, type 'none'."
 	change = gets.chomp.downcase
-	if change == "full name"
-		puts "What is you full name?"
-		new_full_name = gets.chomp
+	if change == 'none'
+		puts thanks
+	else
+		if change == "full name"
+			puts "What is you full name?"
+			new_full_name = gets.chomp
+			new_client[:full_name] = new_full_name
+		elsif change == ""
+			
+					
+		end
+	puts new_client
+	puts "---------------------------"
+	puts "Full Name: #{new_client[:full_name]}"
+ 	puts "Phone Number: #{new_client[:phone_number]}"
+ 	puts "Email: #{new_client[:email]}"
+	puts "Kids: #{new_client[:kids]}"
+	puts "Number of kids: #{new_client[:number_of_kids]}"
+	puts "Client's ideal theme: #{new_client[:theme]}"
+	puts "--------------------------"
+	puts thanks		
+	end
 
 
 
