@@ -4,7 +4,10 @@
 #Convert input to the appropriate data type
 puts "Please anwser the following questions:"
 puts "What is you full name?"
-	full_name = gets.chomp
+	full_name = gets.chomp.to_s
+puts "What is your phone number?"
+	phone_number = gets.chomp.to_i
+	
 
 
 #print hash
