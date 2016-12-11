@@ -9,13 +9,20 @@ puts "What is your phone number?"
 	phone_number = gets.chomp.to_i
 puts "What is you email address?"
 	email = gets.chomp.to_s
-put "Do you have kids? (Y/N)"
-	kids = gets.chomp
+puts "Do you have kids? (Y/N)"
+	kids = gets.chomp.upcase
 		if kids == "Y"
 			puts "How many?"
-				how_many = gets.chomp
+				how_many = gets.chomp.to_i
+		else
+			how_many = nil
+		end
 
-
+p full_name
+p phone_number
+p email
+p kids
+p how_many
 #print hash
 
 #Prompt user which data they wish to change
