@@ -37,7 +37,7 @@ new_client = {
 	email: email,
 	kids: kids,
 	number_of_kids: how_many,
-	theme: decor_theme
+	ideal_theme: decor_theme
 }
 p new_client
 puts "---------------------------"
@@ -46,7 +46,7 @@ puts "---------------------------"
  puts "Email: #{new_client[:email]}"
  puts "Kids: #{new_client[:kids]}"
  puts "Number of kids: #{new_client[:number_of_kids]}"
- puts "Ideal theme: #{new_client[:theme]}"
+ puts "Ideal theme: #{new_client[:ideal_theme]}"
 puts "--------------------------"
 
 
@@ -93,7 +93,7 @@ puts "What information would you like to change?\nIf there is nothing to change,
 		elsif change == "ideal theme"
 			puts "What is your ideal decor theme would you like?"
 			new_decor_theme = gets.chomp
-			new_client[:theme] = new_decor_theme						
+			new_client[:ideal_theme] = new_decor_theme						
 		end
 	puts new_client
 	puts "---------------------------"
@@ -102,7 +102,7 @@ puts "What information would you like to change?\nIf there is nothing to change,
  	puts "Email: #{new_client[:email]}"
 	puts "Kids: #{new_client[:kids]}"
 	puts "Number of kids: #{new_client[:number_of_kids]}"
-	puts "Ideal theme: #{new_client[:theme]}"
+	puts "Ideal theme: #{new_client[:ideal_theme]}"
 	puts "--------------------------"
 	puts thanks		
 	end
