@@ -17,7 +17,7 @@ puts "Do you have kids? (Y/N)"
 		else
 			how_many = "N/A"
 		end
-puts "What ideal decor theme would you like?"
+puts "What is your ideal decor theme would you like?"
 	decor_theme = gets.chomp
 puts "--------------------------"
 
@@ -68,15 +68,23 @@ puts "What information would you like to change?\nIf there is nothing to change,
 			new_client[:full_name] = new_full_name
 		elsif change == "phone number"
 			puts "What is your phone number?"
-			new_phone_number =gets.chomp.to_i
+			new_phone_number = gets.chomp.to_i
 			new_client[:phone_number] = new_phone_number
 		elsif change == "email"
 			puts "What is you email address?"
 			new_email = gets.chomp
 			new_client[:email] = new_email
-				
-			
-					
+		elsif change == "kids"
+			puts "Do you have kids? (Y/N)"
+			new_kids = gets.chomp.upcase
+				if new_kids == "Y"
+					puts "How many?"
+					new_how_many = gets.chomp.to_i
+				else
+					new_how_many = "N/A"
+				end
+			new_client[:kids] = new_kids	
+			new_client[:number_of_kids]	= new_how_many	
 		end
 	puts new_client
 	puts "---------------------------"
