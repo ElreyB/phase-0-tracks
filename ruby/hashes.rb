@@ -7,7 +7,8 @@ puts "What is you full name?"
 	full_name = gets.chomp.to_s
 puts "What is your phone number?"
 	phone_number = gets.chomp.to_i
-	
+puts "What is you email address?"
+	email = gets.chomp
 
 
 #print hash
