@@ -17,12 +17,16 @@ puts "Do you have kids? (Y/N)"
 		else
 			how_many = nil
 		end
+puts "What decor theme would you like?"
+	decor_theme = gets.chomp.to_s
+puts "--------------------------"
 
 p full_name
 p phone_number
 p email
 p kids
 p how_many
+p decor_theme
 #print hash
 
 #Prompt user which data they wish to change
