@@ -15,19 +15,31 @@ puts "Do you have kids? (Y/N)"
 			puts "How many?"
 				how_many = gets.chomp.to_i
 		else
-			how_many = nil
+			how_many = "N/A"
 		end
 puts "What decor theme would you like?"
 	decor_theme = gets.chomp
 puts "--------------------------"
 
-p full_name
-p phone_number
-p email
-p kids
-p how_many
-p decor_theme
+#Driver code
+# p full_name
+# p phone_number
+# p email
+# p kids
+# p how_many
+# p decor_theme
+
+#Add input to hash
 #print hash
+new_client = {
+	full_name: full_name,
+	phone_number: phone_number,
+	email: email,
+	kids: kids,
+	number_of_kids: how_many,
+	theme: decor_theme
+}
+ puts new_client
 
 #Prompt user which data they wish to change
 	# if the user writes 'none' skip
