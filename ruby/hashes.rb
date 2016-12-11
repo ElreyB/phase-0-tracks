@@ -90,8 +90,10 @@ puts "What information would you like to change?\nIf there is nothing to change,
 			puts "How many?"
 			new_how_many = gets.chomp.to_i
 			new_client[:number_of_kids]	= new_how_many
-		elsif change == 
-									
+		elsif change == "ideal theme"
+			puts "What is your ideal decor theme would you like?"
+			new_decor_theme = gets.chomp
+			new_client[:theme] = new_decor_theme						
 		end
 	puts new_client
 	puts "---------------------------"
