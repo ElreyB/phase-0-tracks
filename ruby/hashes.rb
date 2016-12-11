@@ -17,7 +17,7 @@ puts "Do you have kids? (Y/N)"
 		else
 			how_many = "N/A"
 		end
-puts "What decor theme would you like?"
+puts "What ideal decor theme would you like?"
 	decor_theme = gets.chomp
 puts "--------------------------"
 
@@ -39,11 +39,22 @@ new_client = {
 	number_of_kids: how_many,
 	theme: decor_theme
 }
- puts new_client
+p new_client
+ puts "Full Name: #{new_client[:full_name]}"
+ puts "Phone Number: #{new_client[:phone_number]}"
+ puts "Email: #{new_client[:email]}"
+ puts "Kids: #{new_client[:kids]}"
+ puts "Number of kids: #{new_client[:number_of_kids]}"
+ puts "Client's ideal theme: #{new_client[:theme]}"
+
+ puts "--------------------------"
 
 #Prompt user which data they wish to change
 	# if the user writes 'none' skip
 	#but if user wants to change data
 		#update data
-#print updated hash
+		#print updated hash
+puts 
+
+#Exit program
 
