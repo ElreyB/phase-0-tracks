@@ -11,7 +11,7 @@ dance_school = {
 		department_head: 'Ms. Snow',
 		teachers: ['John Smith', 'Sammual Pots', 'Cindy Chou', 'Roger Dean']
 	},
-	ballet: {
+	ballet_class: {
 		styles: ['Balanchine', 'Vaganova', 'Cecchetti'],
 		classroom_level: {
 			room1: 'Level 1 & 2',
@@ -22,7 +22,9 @@ dance_school = {
 		department_head: 'Mr Kipp Martian',
 		teachers: ['Maria Jackson', 'Cameron McSteal', 'Katie Vanger', 'Nacy Cantra']
 	},
+	jazz_
 		
 }
 #Diver code to make sure data is correct
 #p dance_school[:modern_class]
+#p dance_school[:ballet_class]
