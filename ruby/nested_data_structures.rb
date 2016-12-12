@@ -23,6 +23,7 @@ dance_school = {
 		teachers: ['Maria Jackson', 'Cameron McSteal', 'Katie Vanger', 'Nacy Cantra']
 	},
 	jazz_class: {
+		styles: ['Tap Dacne', 'Swing', 'Flossie'],
 	}
 		
 }
