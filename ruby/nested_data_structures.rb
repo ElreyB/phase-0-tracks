@@ -22,9 +22,10 @@ dance_school = {
 		department_head: 'Mr Kipp Martian',
 		teachers: ['Maria Jackson', 'Cameron McSteal', 'Katie Vanger', 'Nacy Cantra']
 	},
-	jazz_
+	jazz_class: {
+	}
 		
 }
 #Diver code to make sure data is correct
 #p dance_school[:modern_class]
-#p dance_school[:ballet_class]
+p dance_school[:ballet_class]
