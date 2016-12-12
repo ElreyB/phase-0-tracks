@@ -12,6 +12,7 @@ dance_school = {
 		teachers: ['John Smith', 'Sammual Pots', 'Cindy Chou', 'Roger Dean']
 	},
 	ballet: {
+		styles: ['Balanchine', 'Vaganova', 'Cecchetti'],
 	},
 		
 }
