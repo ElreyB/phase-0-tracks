@@ -1,6 +1,6 @@
 #Dance class list of styles, levels, and teachers
 dance_school = {
-	modern: {
+	modern_class: {
 		styles: ['Horton', 'Limon', 'Graham'],
 		classroom_level: {
 			room1: 'Beginner',
