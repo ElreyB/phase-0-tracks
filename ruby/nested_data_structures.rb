@@ -31,9 +31,11 @@ dance_school = {
 			room4: 'Level 4'
 		},
 		department_head: 'MJ',
+		teachers: ['Levin Johnson', 'Oliver G. Bacston', 'Carter Hall', 'Bob Flossie']
 	}
 		
 }
 #Diver code to make sure data is correct
 #p dance_school[:modern_class]
-p dance_school[:ballet_class]
+#p dance_school[:ballet_class]
+p dance_school[:jazz_class]
