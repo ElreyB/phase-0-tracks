@@ -13,6 +13,12 @@ dance_school = {
 	},
 	ballet: {
 		styles: ['Balanchine', 'Vaganova', 'Cecchetti'],
+		classroom_level: {
+			room1: 'Level 1 & 2',
+			room2: 'Level 3 & 4',
+			room3: 'Level 4 & 5',
+			room4: 'Pointe Work'
+		},
 	},
 		
 }
