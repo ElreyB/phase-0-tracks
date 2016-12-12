@@ -11,5 +11,9 @@ dance_school = {
 		department_head: 'Ms. Snow',
 		teachers: ['John Smith', 'Sammual Pots', 'Cindy Chou', 'Roger Dean']
 	},
+	ballet: {
+	},
 		
 }
+#Diver code to make sure data is correct
+#p dance_school[:modern_class]
