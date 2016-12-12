@@ -30,6 +30,7 @@ dance_school = {
 			room3: 'Level 3',
 			room4: 'Level 4'
 		},
+		department_head: 'MJ',
 	}
 		
 }
