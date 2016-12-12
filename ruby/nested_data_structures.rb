@@ -8,7 +8,8 @@ dance_school = {
 			room3: 'Intermediate',
 			room4: 'Advance'
 		},
-		department_head: 'Ms. Snow'
+		department_head: 'Ms. Snow',
+		teachers: ['John Smith', 'Sammual Pots', 'Cindy Chou', 'Roger Dean']
 	},
 		
 }
