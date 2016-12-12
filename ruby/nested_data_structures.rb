@@ -20,6 +20,7 @@ dance_school = {
 			room4: 'Pointe Work'
 		},
 		department_head: 'Mr Kipp Martian',
+		teachers: ['Maria Jackson', 'Cameron McSteal', 'Katie Vanger', 'Nacy Cantra']
 	},
 		
 }
