@@ -19,6 +19,7 @@ dance_school = {
 			room3: 'Level 4 & 5',
 			room4: 'Pointe Work'
 		},
+		department_head: 'Mr Kipp Martian',
 	},
 		
 }
