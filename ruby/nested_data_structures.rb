@@ -8,6 +8,7 @@ dance_school = {
 			room3: 'Intermediate',
 			room4: 'Advance'
 		},
+		department_head: 'Ms. Snow'
 	},
 		
 }
