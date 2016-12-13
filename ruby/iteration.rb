@@ -14,4 +14,5 @@ profile = {
 	happy_person: true
 }
 
-p profile
+#.each
+colors.each {|color| puts "#{color.upcase} is a component of RGB!"}
