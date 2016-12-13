@@ -44,6 +44,8 @@ profile = {
 # profile.delete_if {|key, value| value.class == Fixnum}
 # p profile
 
+#A method that filters a data structure for only 
+#items that do satisfy a certain condition 
 #.select
 # p colors
 # colors.select! do |color|
@@ -68,12 +70,12 @@ profile = {
 
 #Method that removes item condition in the block evaluates to false
 #.drop_while
-p colors
-p colors.drop_while  {|c| (c == "red" || c == "green")} 
+# p colors
+# p colors.drop_while  {|c| (c == "red" || c == "green")} 
 
-
-
-
+#Method that removes item condition in the block evaluates to false
+#.reject!
 # p profile
+# profile.reject! {|key,value| key > :shoe_size}
 # p profile
 
