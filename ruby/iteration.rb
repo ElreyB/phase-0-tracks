@@ -45,13 +45,16 @@ profile = {
 # p profile
 
 #.select
-p colors
-colors.select! do |color|
-	color.downcase.include?('u')
+# p colors
+# colors.select! do |color|
+# 	color.downcase.include?('u')
+# end
+# p colors
+
+p profile
+profile.select! do |key, value|
+	value.class == String
 end
-p colors
-
-
-
+p profile
 
 
