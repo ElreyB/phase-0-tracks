@@ -24,7 +24,10 @@ def next_consonat(string)
 	string
 end
 #p next_consonat("Elrey BelmontiZ")
-p next_consonat(next_vowel(swap("Felicia Torres")))
-def alias(name)
-	
+#p next_consonat(next_vowel(swap("Felicia Torres")))
+
+def fakename(name)
+	next_consonat(next_vowel(swap(name)))
 end
+
+p fakename("Felicia Torres")
