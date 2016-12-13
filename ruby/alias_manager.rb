@@ -29,5 +29,11 @@ end
 def fakename(name)
 	next_consonat(next_vowel(swap(name)))
 end
+#p fakename("Felicia Torres")
 
-p fakename("Felicia Torres")
+#user Interface
+print "\t***Alias Creater***\n"
+print "Enter first and last name to create an alias:\n"
+	agent_name = gets.chomp
+	alias_name = fakename(agent_name)
+puts alias_name
