@@ -33,7 +33,19 @@ end
 
 #user Interface
 print "\t***Alias Creater***\n"
-print "Enter first and last name to create an alias:\n"
+print "Enter first and last name to create an alias.\n"
+print "Press 'Enter' and create another alias.\n"
+print "Type 'quit' when done.(Case sensitive)\n"
+print "Enter first and last names to create an alias:\n"
+agent_name = ''
+	until agent_name == "quit"
 	agent_name = gets.chomp
-	alias_name = fakename(agent_name)
+		if agent_name == "quit"
+			break
+		else
+			alias_name = fakename(agent_name)
+		#p alias_name -----> To check that all names enter changed
+		end
+		alias_name
+	end
 puts alias_name
