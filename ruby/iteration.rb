@@ -51,10 +51,14 @@ profile = {
 # end
 # p colors
 
-p profile
-profile.select! do |key, value|
-	value.class == String
-end
-p profile
+# p profile
+# profile.select! do |key, value|
+# 	value.class == String
+# end
+# p profile
+
+p colors
+colors.keep_if {|color| color.upcase.include?('G')}
+p colors
 
 
