@@ -29,20 +29,27 @@ profile = {
 # p colors
 
 
-#!map
+#map!
 # p colors
 # colors.map!{|color| color + "!"}
 # p colors
 
 #Method to iterate through items and delete any that meet a certain condition
 #.delete_if
-p colors
-colors.delete_if {|color| color.downcase.include?('r')}
-p colors
+# p colors
+# colors.delete_if {|color| color.downcase.include?('r')}
+# p colors
 
-p profile
-profile.delete_if {|key, value| value.class == Fixnum}
-p profile
+# p profile
+# profile.delete_if {|key, value| value.class == Fixnum}
+# p profile
+
+#.select
+p colors
+colors.select! do |color|
+	color.downcase.include?('u')
+end
+p colors
 
 
 
