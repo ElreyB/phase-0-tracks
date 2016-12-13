@@ -57,8 +57,12 @@ profile = {
 # end
 # p profile
 
-p colors
-colors.keep_if {|color| color.upcase.include?('G')}
-p colors
+# p colors
+# colors.keep_if {|color| color.upcase.include?('G')}
+# p colors
+
+p profile
+profile.keep_if {|key,value| key.to_s.downcase == "name"}
+p profile
 
 
