@@ -35,9 +35,14 @@ profile = {
 # p colors
 
 #Method to iterate through items and delete any that meet a certain condition
+#.delete_if
 p colors
 colors.delete_if {|color| color.downcase.include?('r')}
 p colors
+
+p profile
+profile.delete_if {|key, value| value.class == Fixnum}
+p profile
 
 
 
