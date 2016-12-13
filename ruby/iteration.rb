@@ -1,8 +1,8 @@
-def foo(array)
-	array.each {|item| puts "This is an item in the array: #{item}"}
-end
-array = ["a","b","c","d"]
-p foo(array)
+# def foo(array)
+# 	array.each {|item| puts "This is an item in the array: #{item}"}
+# end
+# array = ["a","b","c","d"]
+# p foo(array)
 
 colors = ["red", "green", "blue"]
 
@@ -15,4 +15,8 @@ profile = {
 }
 
 #.each
-colors.each {|color| puts "#{color.upcase} is a component of RGB!"}
+# colors.each {|color| puts "#{color.upcase} is a component of RGB!"}
+#profile.each do |key, value|
+	puts "Your #{key} is #{value}."
+	end
+
