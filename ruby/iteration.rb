@@ -15,8 +15,20 @@ profile = {
 }
 
 #.each
-# colors.each {|color| puts "#{color.upcase} is a component of RGB!"}
+#colors.each {|color| puts "#{color.upcase} is a component of RGB!"}
 #profile.each do |key, value|
-	puts "Your #{key} is #{value}."
-	end
+	# puts "Your #{key} is #{value}."
+	# end
 
+#.map
+# p colors
+# colors.map do |color| 
+# 	puts "#{color} cat"
+# end
+# p colors
+
+
+#!map
+p colors
+colors.map!{|color| color + "!"}
+p colors
