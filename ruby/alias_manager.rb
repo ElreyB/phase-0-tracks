@@ -15,6 +15,16 @@ def next_vowel(string)
 	string.tr!("aeiouAEIOU", "eiouaEIOUA")
 	string
 end
+#p next_vowel("ElreyA BelmOnti")
 
-p next_vowel("ElreyA BelmOnti")
 #Change consonants to the next consonant.
+def next_consonat(string)
+	string.tr!("bcdfghjklmnpqrstvwxyzBCDFGHJKLMNPQRSTVWXYZ",
+		"cdfghjklmnpqrstvwxyzbCDFGHJKLMNPQRSTVWYZB")
+	string
+end
+#p next_consonat("Elrey BelmontiZ")
+p next_consonat(next_vowel(swap("Felicia Torres")))
+def alias(name)
+	
+end
