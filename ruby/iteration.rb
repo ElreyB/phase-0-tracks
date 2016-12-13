@@ -16,6 +16,7 @@ profile = {
 
 #.each
 #colors.each {|color| puts "#{color.upcase} is a component of RGB!"}
+
 #profile.each do |key, value|
 	# puts "Your #{key} is #{value}."
 	# end
@@ -29,6 +30,16 @@ profile = {
 
 
 #!map
+# p colors
+# colors.map!{|color| color + "!"}
+# p colors
+
+#Method to iterate through items and delete any that meet a certain condition
 p colors
-colors.map!{|color| color + "!"}
+colors.delete_if {|color| color.downcase.include?('r')}
 p colors
+
+
+
+
+
