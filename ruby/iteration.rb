@@ -57,12 +57,23 @@ profile = {
 # end
 # p profile
 
+#.keep_if
 # p colors
 # colors.keep_if {|color| color.upcase.include?('G')}
 # p colors
 
-p profile
-profile.keep_if {|key,value| key.to_s.downcase == "name"}
-p profile
+# p profile
+# profile.keep_if {|key,value| key.to_s.downcase == "name"}
+# p profile
 
+#Method that removes item condition in the block evaluates to false
+#.drop_while
+p colors
+p colors.drop_while  {|c| (c == "red" || c == "green")} 
+
+
+
+
+# p profile
+# p profile
 
