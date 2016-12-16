@@ -16,7 +16,6 @@ def search_array(array, item)
 		end
 	end
 	#If item is not in the array return nil
-
 	if counter >= array.length
 			return nil
 		else
@@ -27,3 +26,26 @@ end
 arr = [42, 89, 23, 1] 
 p search_array(arr, 1)
 #=> 3
+
+#Method that does the Fibonacci terms
+#Takes a given number
+#Each number in the array is the some of the pervious two
+#Lenght of the array is the same as the given number
+#Return the array on sums
+def fib(number)
+	
+end
+
+
+
+
+
+
+
+
+
+
+
+
+
+
