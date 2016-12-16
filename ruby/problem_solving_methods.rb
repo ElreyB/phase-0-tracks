@@ -5,26 +5,23 @@
 #The method should return the index of the item, or nil if the integer 
 #is not present in the array. Don't use built-in array methods like
 
-arr = [42, 89, 23, 1] 
 def search_array(array, item)
 	counter = 0
 	array.each do |element|	
 		if item == element
-			puts "HI"
+			 counter
+			  break
 		else
-			puts "no"
+			 counter += 1
 		end
-		p counter
 	end
+	#If item is not in the array return nil
 
-	# counter = 0
-	# while counter < array.length
-	# 	if item == 
-	# 	counter += 1
-	# end
-	#taken num to search throught the 
-	#
-	#return the index number
+	if counter >= array.length
+			return nil
+		else
+			counter
+		end			
 end
 
 arr = [42, 89, 23, 1] 
