@@ -1,3 +1,6 @@
+#5.3 Mandatory pairing
+#Elrey and Jack Loftus
+
 def foo(array)
 	array.each {|item| puts "This is an item in the array: #{item}"}
 end
@@ -23,10 +26,16 @@ profile.each do |key, value|
 
 # .map
 p colors
-colors.map do |color| 
-	puts "#{color} cat"
+color_cats = colors.map do |color| 
+	"#{color} cat"
 end
-p colors
+p color_cats
+
+p profile
+new_name = profile.map do |key, value|
+  key.to_s + " is " + value.to_s
+end
+p new_name
 
 
 # map!
