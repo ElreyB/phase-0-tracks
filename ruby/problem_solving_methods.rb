@@ -35,11 +35,14 @@
 def fib(number)
 	arr = [0,1]
 	counter = 2
+	for i in 1..number-2
 		arr[counter] = arr[counter-2] + arr[counter-1]
-		 arr
+		counter += 1
+	end
+	arr
 end
 
-p fib(6)
+p fib(100)
 #-->[0,1,1,2,3,5]
 
 
