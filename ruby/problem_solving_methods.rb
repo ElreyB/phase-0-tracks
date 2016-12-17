@@ -59,25 +59,30 @@
 			#swap the elements
 #6 Compare the next two elements (second and thrid) 
 #7 repeat step 4
-#8 Go through each elemented
+#8 repeat steps 3-7 until sorted
 #Return sorted array
 def bubble_sort(array)
-temp = 
-array.each do |element|
-	for i in 0...array.length-1
-		if element < array[i+1] #compare first and second element, then second and thrid, etc
-			array
-			
-		else
-			temp = array[i]
-			array[i] = array[i+1]
-			array[i+1] = temp
-			array
+temp = nil
+	for n in 0..array.length-1
+		swapped = false
+		for i in 0...array.length-1
+			if array[i] < array[i+1] #compare first and second element, then second and thrid, etc
+				p i
+				p array
+			else
+				temp = array[i]
+				array[i] = array[i+1]
+				array[i+1] = temp
+				p i	
+				p array
+				swapped = true
+			end
+		end
+		if !swapped
+			break
 		end
 	end
-	
-end
-	array
+		array
 end
 
 
@@ -85,11 +90,7 @@ numbers = [7,35,2,97,13]
 
 p bubble_sort(numbers)
 
-# i=0
-##sortedarray=7
-# i =1
-##sorted array = 7,2
-# i =2
+
 
 
 
