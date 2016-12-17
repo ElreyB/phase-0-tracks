@@ -54,7 +54,7 @@
 #3 By looking at all the elements in the array starting at the first and second element
 #4 Compares the two 
 		#If the second element is greater than the first element
-			#the are sorted
+			#they are sorted
 		#If the second element is not greater than the first element
 			#swap the elements
 #6 Compare the next two elements (second and thrid) 
@@ -65,20 +65,19 @@ def bubble_sort(array)
 temp = 
 array.each do |element|
 	for i in 0...array.length-1
-		if array[i+1] < array[i]
-			sorted_array.push(array[i+1])
-			array.delete_at(i+1)
+		if element < array[i+1] #compare first and second element, then second and thrid, etc
 			array
-			p sorted_array
+			
 		else
-			sorted_array.push(array[i])
-			array.delete_at(i)
+			temp = array[i]
+			array[i] = array[i+1]
+			array[i+1] = temp
 			array
-			p sorted_array
 		end
 	end
+	
 end
-	sorted_array
+	array
 end
 
 
