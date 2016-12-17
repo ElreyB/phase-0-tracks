@@ -49,20 +49,20 @@
 
 # p (num[-2] + num[-3]) == num[-1]
 
-#1 Wrtie a bubble sorting method that takes an array numbers
+#1 Wrtie a bubble sorting method that takes an array of numbers
 #2 Sorts the array from smallest to bigget number
 #3 By looking at all the elements in the array starting at the first and second element
-#4 Compares the two and adds the smallest element to the new array
-#5 Then that element from origin array to delete 
-#6 repeat steps 3-5 until the end of original array
-#7 Once original array length is 1
-#8 Add value to new array last index
-#9 Return new array
-#10 Repeat 3-9
+#4 Compares the two 
+		#If the second element is greater than the first element
+			#the are sorted
+		#If the second element is not greater than the first element
+			#swap the elements
+#6 Compare the next two elements (second and thrid) 
+#7 repeat step 4
+#8 Go through each elemented
 #Return sorted array
 def bubble_sort(array)
-index_0 = array[0]
-sorted_array = []
+temp = 
 array.each do |element|
 	for i in 0...array.length-1
 		if array[i+1] < array[i]
