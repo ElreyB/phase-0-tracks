@@ -69,10 +69,13 @@ temp = nil
 	for n in 0..array.length-1
 		swapped = false
 		for i in 0...array.length-1
-			if array[i] > array[i+1] 
+			if array[i] < array[i+1]
+				array
+			else 
 				temp = array[i]
 				array[i] = array[i+1]
 				array[i+1] = temp
+				array
 				swapped = true
 			end
 		end
