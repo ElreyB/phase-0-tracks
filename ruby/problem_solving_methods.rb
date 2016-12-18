@@ -57,7 +57,7 @@ end
 #3 By looking at all the elements in the array starting at the first and second element
 #4 Compares the two 
 		#If the second element is greater than the first element
-			#they are sorted----> refactor this step out
+			#they are sorted
 		#If the second element is not greater than the first element
 			#swap the elements
 #6 Compare the next two elements (second and thrid) 
