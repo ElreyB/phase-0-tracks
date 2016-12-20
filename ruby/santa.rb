@@ -15,7 +15,8 @@ class Santa
 	end
 
 	def eat_milk_and_cookies(cookie)
-		print "That was a good #{cookie}!\n"
+		print "Santa has some of your cookies and milk then says, "
+		print "'Mmmmmmmm, That was a good #{cookie} cookie!'\n"
 	end
 
 	def celebrate_birthday
@@ -52,15 +53,17 @@ cookies = ["Oatmeal", "Oatmeal Raisin", "Chocolate Chip", "Sugar", "Peanut Butte
 #Randomly pick item from list
 random_gender = genders.sample
 random_ethnicities = ethnicities.sample
+random_cookies = cookies.sample
 
 
 
 
 
 #driver code
-santa = Santa.new("#{random_gender}", "#{random_ethnicities}")
+santa = Santa.new(random_gender, random_ethnicities)
 santa.about
 santa.reindeer_call
+santa.eat_milk_and_cookies(random_cookies)
 
 
 #setter method
