@@ -48,7 +48,7 @@ end
 #List of genders, ethnicities
 genders = ["Spirit", "Female", "Bigender", "Male", "Transgender", "Gender fluid", "N/A"]
 ethnicities = ["Black", "Latino", "White", "Japanese-African", "prefer not to say", "Mystical Creature (unicorn)", "N/A"]
-
+cookies = ["Oatmeal", "Oatmeal Raisin", "Chocolate Chip", "Sugar", "Peanut Butter", "Ginger", "Snickerdoodles"]
 #Randomly pick item from list
 random_gender = genders.sample
 random_ethnicities = ethnicities.sample
