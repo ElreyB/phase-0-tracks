@@ -1,12 +1,12 @@
 class Santa
-	attr_reader :age, :ethnicity
+	attr_reader :age, :ethnicity, :reindeer_ranking
 	attr_accessor :gender
 
 	def initialize(gender,ethnicity)
 		print "Initializing Santa instance......\n"
 		@gender = gender
 		@ethnicity = ethnicity
-		reindeer_ranking = ["Rudolph", "Dasher", "Dancer", "Prancer", "Vixen", "Comet", "Cupid", "Donner", "Blitzen"]
+		@reindeer_ranking = ["Rudolph", "Dasher", "Dancer", "Prancer", "Vixen", "Comet", "Cupid", "Donner", "Blitzen"]
 		@age = rand(0..140)	
 	end
 
@@ -32,9 +32,16 @@ class Santa
 		@reindeer_ranking
 	end
 
+	def reindeer_call
+		puts "#{gender} #{@ethnicity} says,"
+		reindeer_ranking.each do |reindeer| 
+			puts "On #{reindeer}"
+		end
+		puts "Away we GOOOO!!!!!!"
+	end
+
 	def about
 		puts "I am a #{@age} year #{gender} #{@ethnicity} Santa."
-		
 	end
 end
 
@@ -53,6 +60,8 @@ random_ethnicities = ethnicities.sample
 #driver code
 santa = Santa.new("#{random_gender}", "#{random_ethnicities}")
 santa.about
+santa.reindeer_call
+
 
 #setter method
 # def gender=(new_gender)
