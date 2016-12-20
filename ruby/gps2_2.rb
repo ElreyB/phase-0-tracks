@@ -102,4 +102,7 @@ print_pretty(grocery_list)
 # By assigning a variable to the output of the method.
 
 # What concepts were solidified in this challenge, and what concepts are still confusing?
-# 
+# The concept of assigning a variable to an output of a method out side that was
+# solidified for me.  I was a litte confuse about how that all worked.
+# Pseudocode still is a little bit confusing to me. I feel I need a good, solid
+# and visiual template to really understand how to write good pseudocode.
