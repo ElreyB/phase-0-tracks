@@ -36,24 +36,18 @@ end
 #List of genders, ethnicities
 genders = ["Spirit", "Female", "Bigender", "Male", "Transgender", "Gender fluid", "N/A"]
 ethnicities = ["Black", "Latino", "White", "Japanese-African", "prefer not to say", "Mystical Creature (unicorn)", "N/A"]
+
+#Randomly pick item from list
+random_gender = genders.sample
+random_ethnicities = ethnicities.sample
+
+
+
+
+
 #driver code
-# p santa = Santa.new("male", "black")
-# santa.gender = "Female"
-# puts "Santa is #{santa.age} years old and #{santa.ethnicity}."
-# santa.celebrate_birthday
-# puts "Santa is #{santa.age} years old and #{santa.ethnicity}." 
-# p santa
+p santa = Santa.new("#{random_gender}", "#{random_ethnicities}")
 
-# p santa
-# puts santa.speak
-# puts santa.eat_milk_and_cookies("sugar cookie")
-
-# santas = []
-# example_genders = ["agender", "female", "bigender", "male", "female", "gender fluid", "N/A"]
-# example_ethnicities = ["black", "Latino", "white", "Japanese-African", "prefer not to say", "Mystical Creature (unicorn)", "N/A"]
-# example_genders.length.times do |i|
-#   p santas << Santa.new(example_genders[i], example_ethnicities[i])
-# end
 
 #setter method
 # def gender=(new_gender)
