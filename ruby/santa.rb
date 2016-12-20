@@ -19,9 +19,19 @@ class Santa
 	def celebrate_birthday
 		@age += 1
 	end
+
+	def get_mad_at(reindeer_name)
+		@reindeer_ranking.each do |reindeer|
+			if reindeer == reindeer_name
+				@reindeer_ranking.delete(reindeer)
+				@reindeer_ranking.insert(-1, reindeer)
+			end
+		end
+		@reindeer_ranking
+	end
 end
 
-# santa = Santa.new
+# santa = Santa.new("male", "black")
 
 # p santa
 # puts santa.speak
