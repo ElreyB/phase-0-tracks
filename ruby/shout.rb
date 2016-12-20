@@ -24,3 +24,7 @@ end
 class Child
 	include Shout
 end
+
+class Teacher
+	include Shout
+end
