@@ -38,13 +38,17 @@ class Santa
 		@age
 	end
 
+	def ethnicity
+		@ethnicity	
+	end
+
 end
 
 p santa = Santa.new("male", "black")
 santa.gender = "Female"
-puts "Santa is #{santa.age} years old."
+puts "Santa is #{santa.age} years old and #{santa.ethnicity}."
 santa.celebrate_birthday
-puts "Santa is #{santa.age} years old."
+puts "Santa is #{santa.age} years old and #{santa.ethnicity}." 
 p santa
 
 # p santa
