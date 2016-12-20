@@ -1,7 +1,7 @@
 class Santa
 	attr_reader :age, :ethnicity
 	attr_accessor :gender
-	
+
 	def initialize(gender,ethnicity)
 		print "Initializing Santa instance......\n"
 		@gender = gender
@@ -31,27 +31,18 @@ class Santa
 		end
 		@reindeer_ranking
 	end
-	
-	# def gender=(new_gender)
-	# 	@gender = new_gender
-	# end
-
-	# def age
-	# 	@age
-	# end
-
-	# def ethnicity
-	# 	@ethnicity	
-	# end
-
 end
 
-p santa = Santa.new("male", "black")
-santa.gender = "Female"
-puts "Santa is #{santa.age} years old and #{santa.ethnicity}."
-santa.celebrate_birthday
-puts "Santa is #{santa.age} years old and #{santa.ethnicity}." 
-p santa
+#List of genders, ethnicities
+genders = ["Spirit", "Female", "Bigender", "Male", "Transgender", "Gender fluid", "N/A"]
+
+#driver code
+# p santa = Santa.new("male", "black")
+# santa.gender = "Female"
+# puts "Santa is #{santa.age} years old and #{santa.ethnicity}."
+# santa.celebrate_birthday
+# puts "Santa is #{santa.age} years old and #{santa.ethnicity}." 
+# p santa
 
 # p santa
 # puts santa.speak
@@ -63,3 +54,17 @@ p santa
 # example_genders.length.times do |i|
 #   p santas << Santa.new(example_genders[i], example_ethnicities[i])
 # end
+
+#setter method
+# def gender=(new_gender)
+	# 	@gender = new_gender
+	# end
+
+#getter method
+	# def age
+	# 	@age
+	# end
+
+	# def ethnicity
+	# 	@ethnicity	
+	# end
