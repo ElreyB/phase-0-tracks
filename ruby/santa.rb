@@ -46,10 +46,10 @@ class Santa
 	end
 end
 
-#Print many santas
+#How many santa stories 
 print "How many Santa stories would you like to hear?\n"
 	stories = gets.chomp.to_i
-
+#Loop to generate stories
 	stories.times do
 
 	#List of genders, ethnicities, cookies, reindeers
@@ -63,7 +63,8 @@ print "How many Santa stories would you like to hear?\n"
 	random_ethnicities = ethnicities.sample
 	random_cookies = cookies.sample
 	random_reindeer = reindeers.sample
-
+	
+		#Making Santa instances
 		santa = Santa.new(random_gender, random_ethnicities)
 		santa.about
 		santa.reindeer_call
