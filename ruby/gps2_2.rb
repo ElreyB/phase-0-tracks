@@ -11,7 +11,7 @@
 # output: hash with the key as the item and value as the quantity
 def create_list(items)
   grocery_list = {}
-  items.split(" ").each {|x| grocery_list[x]= 0}
+  items.split(" ").map!{|x| grocery_list[x]= 0}
   grocery_list
 end
 
@@ -84,3 +84,22 @@ update_quantity(grocery_list,"Ice Cream" , 1)
 p grocery_list
 puts "-----------------------------------------"
 print_pretty(grocery_list)
+
+# What did you learn about pseudocode from working on this challenge?
+# The more details the better. Still having some trouble with this.
+
+# What are the tradeoffs of using arrays and hashes for this challenge?
+# Since the list had to parts, an item and quantity, the hash
+# was more useful. We could have use an array but it would not be as organized.
+
+# What does a method return?
+# A method returns the last line of code.
+
+# What kind of things can you pass into methods as arguments?
+# Methods will pass the arguments that the method's parameter specifies.
+
+# How can you pass information between methods?
+# By assigning a variable to the output of the method.
+
+# What concepts were solidified in this challenge, and what concepts are still confusing?
+# 
