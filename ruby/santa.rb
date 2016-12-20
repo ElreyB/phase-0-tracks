@@ -33,11 +33,18 @@ class Santa
 	def gender=(new_gender)
 		@gender = new_gender
 	end
+
+	def age
+		@age
+	end
+
 end
 
 p santa = Santa.new("male", "black")
 santa.gender = "Female"
+puts "Santa is #{santa.age} years old."
 santa.celebrate_birthday
+puts "Santa is #{santa.age} years old."
 p santa
 
 # p santa
