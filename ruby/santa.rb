@@ -46,22 +46,24 @@ class Santa
 	end
 end
 
-#List of genders, ethnicities, cookies, reindeers
-genders = ["Spirit", "Female", "Bigender", "Male", "Transgender", "Gender fluid"]
-ethnicities = ["Black", "Latino", "White", "Japanese-African", "prefer not to say", "Unicorn"]
-cookies = ["Oatmeal", "Oatmeal Raisin", "Chocolate Chip", "Sugar", "Peanut Butter", "Ginger", "Snickerdoodles"]
-reindeers = ["Rudolph", "Dasher", "Dancer", "Prancer", "Vixen", "Comet", "Cupid", "Donner", "Blitzen"]
-
-#Randomly pick item from list
-random_gender = genders.sample
-random_ethnicities = ethnicities.sample
-random_cookies = cookies.sample
-random_reindeer = reindeers.sample
-
-
+#Print many santas
 print "How many Santa stories would you like to hear?\n"
 	stories = gets.chomp.to_i
+
 	stories.times do
+
+	#List of genders, ethnicities, cookies, reindeers
+	genders = ["Spirit", "Female", "BiGender", "Male", "Transgender", "Gender fluid"]
+	ethnicities = ["Black", "Latino", "White", "Japanese-African", "Feline", "Unicorn"]
+	cookies = ["Oatmeal", "Oatmeal Raisin", "Chocolate Chip", "Sugar", "Peanut Butter", "Ginger", "Snickerdoodles"]
+	reindeers = ["Rudolph", "Dasher", "Dancer", "Prancer", "Vixen", "Comet", "Cupid", "Donner", "Blitzen"]
+
+	#Randomly pick item from list
+	random_gender = genders.sample
+	random_ethnicities = ethnicities.sample
+	random_cookies = cookies.sample
+	random_reindeer = reindeers.sample
+
 		santa = Santa.new(random_gender, random_ethnicities)
 		santa.about
 		santa.reindeer_call
@@ -72,7 +74,11 @@ print "How many Santa stories would you like to hear?\n"
 		puts "'HEY #{random_reindeer.upcase}!!!! No, eating my cookies. Back of the line.'"
 		p santa.get_mad_at(random_reindeer)
 		puts "------------------------------------"
-end
+	end
+	
+
+
+
 #setter method
 # def gender=(new_gender)
 	# 	@gender = new_gender
