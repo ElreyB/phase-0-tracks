@@ -35,7 +35,7 @@ end
 
 #List of genders, ethnicities
 genders = ["Spirit", "Female", "Bigender", "Male", "Transgender", "Gender fluid", "N/A"]
-
+ethnicities = ["Black", "Latino", "White", "Japanese-African", "prefer not to say", "Mystical Creature (unicorn)", "N/A"]
 #driver code
 # p santa = Santa.new("male", "black")
 # santa.gender = "Female"
