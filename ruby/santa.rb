@@ -7,7 +7,7 @@ class Santa
 		@gender = gender
 		@ethnicity = ethnicity
 		reindeer_ranking = ["Rudolph", "Dasher", "Dancer", "Prancer", "Vixen", "Comet", "Cupid", "Donner", "Blitzen"]
-		@age = 0	
+		@age = rand(0..140)	
 	end
 
 	def speak
@@ -47,7 +47,7 @@ random_ethnicities = ethnicities.sample
 
 #driver code
 p santa = Santa.new("#{random_gender}", "#{random_ethnicities}")
-
+p "Santa is #{santa.age} years old."
 
 #setter method
 # def gender=(new_gender)
