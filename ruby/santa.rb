@@ -50,11 +50,12 @@ end
 genders = ["Spirit", "Female", "Bigender", "Male", "Transgender", "Gender fluid", "N/A"]
 ethnicities = ["Black", "Latino", "White", "Japanese-African", "prefer not to say", "Mystical Creature (unicorn)", "N/A"]
 cookies = ["Oatmeal", "Oatmeal Raisin", "Chocolate Chip", "Sugar", "Peanut Butter", "Ginger", "Snickerdoodles"]
+reindeers = ["Rudolph", "Dasher", "Dancer", "Prancer", "Vixen", "Comet", "Cupid", "Donner", "Blitzen"]
 #Randomly pick item from list
 random_gender = genders.sample
 random_ethnicities = ethnicities.sample
 random_cookies = cookies.sample
-
+random_reindeer = reindeers.sample
 
 
 
@@ -64,8 +65,10 @@ santa = Santa.new(random_gender, random_ethnicities)
 santa.about
 santa.reindeer_call
 santa.eat_milk_and_cookies(random_cookies)
-
-
+santa.celebrate_birthday
+puts "'I shouldn't eat some many cookies. Next year Santa will be #{santa.age}'"
+puts "'HEY #{random_reindeer.upcase}!!!! No, eating my cookies. Back of the line.'"
+p santa.get_mad_at(random_reindeer)
 #setter method
 # def gender=(new_gender)
 	# 	@gender = new_gender
