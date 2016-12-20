@@ -31,6 +31,11 @@ class Santa
 		end
 		@reindeer_ranking
 	end
+
+	def about
+		puts "I am a #{@age} year #{gender} #{@ethnicity} Santa."
+		
+	end
 end
 
 #List of genders, ethnicities
@@ -46,8 +51,8 @@ random_ethnicities = ethnicities.sample
 
 
 #driver code
-p santa = Santa.new("#{random_gender}", "#{random_ethnicities}")
-p "Santa is #{santa.age} years old."
+santa = Santa.new("#{random_gender}", "#{random_ethnicities}")
+santa.about
 
 #setter method
 # def gender=(new_gender)
