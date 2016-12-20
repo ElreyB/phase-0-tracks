@@ -9,5 +9,5 @@ class Bird
 end
 
 class Plane
-
+	include Flight
 end
