@@ -33,7 +33,7 @@ end
  	# remove the item key
 # output: updated hash
 def remove_item (list, item)
-  list.delete_if{|item_name, quantity| item_name == item }
+  list.delete(item)
 end
 
 #remove_item(grocery_list, "banana")
@@ -58,7 +58,7 @@ def print_pretty (list)
   puts "Grocery list".upcase.center(50)
   puts "-----------------".center(50)
   list.each do |item,quantity|
-    puts item.rjust(25) + ":" + quantity.to_s.ljust(25) 
+  puts item.rjust(25) + ":" + quantity.to_s.ljust(25) 
   end
 end
 
@@ -67,7 +67,8 @@ end
 
 # 
 # Create a new list
-grocery_list = create_list ("carrot banana tomato")
+grocery_list = create_list("carrot banana tomato")
+p grocery_list
 puts "-----------------------------------------"
 # Add the following items to your list
 add_item(grocery_list,"Lemonade", 2)
@@ -83,5 +84,3 @@ update_quantity(grocery_list,"Ice Cream" , 1)
 p grocery_list
 puts "-----------------------------------------"
 print_pretty(grocery_list)
-
-
