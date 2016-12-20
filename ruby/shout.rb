@@ -28,3 +28,11 @@ end
 class Teacher
 	include Shout
 end
+
+child = Child.new 
+p child.yell_angrily("I'm hungry")
+p child.yell_happily("Let's play")
+puts "\n"
+teacher = Teacher.new
+p teacher.yell_angrily("Please be quite")
+p teacher.yell_happily("The whole class got A's")
