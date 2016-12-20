@@ -21,3 +21,6 @@ module Shout
 	end
 end
 
+class Child
+	include Shout
+end
