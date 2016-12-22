@@ -1,5 +1,5 @@
-# Using plain old English in a text file or other scratch pad, pseudocode a class for a word-guessing game that meets the following specifications. Assume your driver code will handle input and output as far as the user is concerned. In other words, write a class designed for a computer program to use, not one designed for a human to use directly, then use driver code to bridge the gap between human and Ruby object.
-
+class Word_guess
+end
 
 # #Computer program
 # At the start of the game I will need:
