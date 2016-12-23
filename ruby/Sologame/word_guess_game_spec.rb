@@ -7,5 +7,7 @@ describe WordGuess do
 		expect(word.guessing_word).to eq "unicorn"
 	end
 
-	
+	it "guess limited" do
+		expect(word.guess_limit).to eq 7
+	end
 end
