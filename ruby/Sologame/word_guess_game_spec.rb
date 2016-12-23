@@ -22,4 +22,8 @@ describe WordGuess do
 	it "word to dashes" do 
 		expect(word.hide_word).to eq "-------"
 	end
+
+	it "replace dash with letter" do 
+		expect(word.show_letter("u")).to eq "u------"
+	end
 end

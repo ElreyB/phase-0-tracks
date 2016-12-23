@@ -1,5 +1,5 @@
 class WordGuess
-	attr_reader :word, :guesses, :game_over, :letters
+	attr_reader :word, :guesses, :game_over, :letters, :secert_word 
 # Computer program - Characteristics - Attributes
 	def initialize(word)
 		@word = word
@@ -22,9 +22,22 @@ class WordGuess
 	end
 
 	def hide_word
-		word.tr!(word, "-")
-  		word.tr!(word.upcase, "-")
-  		word
+		@secert_word = guessing_word.tr(word, "-")
+  		@secert_word 
+	end
+
+	def show_letter(letter)
+		if word.include?(letter)
+			hidden_index = word.index(letter)
+			@secert_word[hidden_index]=letter
+			unhidden_letter = secert_word
+		end
+		if word.include?(letter.upcase)
+			hidden_index = word.index(letter.upcase)
+			@secert_word[hidden_index]=letter.upcase
+			unhidden_letter = secert_word
+		end
+		unhidden_letter = secert_word
 	end
 end
 
@@ -34,13 +47,12 @@ end
 # 		if so the number of guesses stays the same
 # 		if not the number of guesses goes down by 1
 
+
 # --Guesses are limited and the number of guesses available is related to the length of the word.
 # A way to count how many guesses the player has
 
-#---------place holder to know what pseudocode I am working on----------
-# --The guessing player receives continual feedback on the current state of the word. So if the secret word is "unicorn", the user will start out seeing something like "_ _ _ _ _ _ _", which would become "_ _ _ c _ _ _" after the user enters a guess of "c".
-# a way to replace player one's word (sercert word) with symbols
 
+#---------place holder to know what pseudocode I am working on----------
 # a way to 
 # 	if player two letter is in the sercert word
 # 		player two see his letter inplace of the symbol
