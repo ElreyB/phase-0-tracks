@@ -1,4 +1,4 @@
-require_relative 'wordguess'
+require_relative 'word_guess_game'
 	describe WordGuess do
 		let(:word) { WordGuess.new("unicorn") }
 
