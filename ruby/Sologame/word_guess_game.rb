@@ -1,10 +1,11 @@
 class WordGuess
-	attr_reader :word, :guesses, :game_over
+	attr_reader :word, :guesses, :game_over, :letters
 
 	def initialize(word)
 		@word = word
 		@guesses = word.length
 		@game_over = false
+		@letters = []
 	end
 
 	def guessing_word
@@ -16,7 +17,6 @@ class WordGuess
 	end
 
 	def wrong_letter(letter)
-		letters = []
 		letters << letter
 		letters
 	end
@@ -29,9 +29,9 @@ end
 # know how many guesses player 2 has
 # A way to tell when the game is over
 
-# A place to store wrong answers ---- could be its own method?
-
 # Behavior - methods
+# A place to store wrong answers ---- could be its own method?
+#---------place holder to know what pseudocode I am working on----------
 # --Repeated guesses do not count against the user
 # a way to check if a letter has been guessed
 # 		if so the number of guesses stays the same
