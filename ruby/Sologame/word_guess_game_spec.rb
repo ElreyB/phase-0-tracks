@@ -14,4 +14,8 @@ describe WordGuess do
 	it "when game starts" do
 		expect(word.game_over).to eq false 
 	end
+
+	it "stores letters" do
+		expect(word.wrong_letter("w")).to eq ["w"]
+	end
 end

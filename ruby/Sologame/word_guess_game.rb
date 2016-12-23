@@ -14,6 +14,12 @@ class WordGuess
 	def guess_limit
 		guesses 
 	end
+
+	def wrong_letter(letter)
+		letters = []
+		letters << letter
+		letters
+	end
 end
 
 
