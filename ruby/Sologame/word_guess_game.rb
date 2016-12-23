@@ -1,13 +1,13 @@
 class WordGuess
 	attr_reader :word, :guesses, :game_over, :letters
-
+# Computer program - Characteristics - Attributes
 	def initialize(word)
 		@word = word
 		@guesses = word.length
 		@game_over = false
 		@letters = []
 	end
-
+# Behavior - methods
 	def guessing_word
 		word
 	end
@@ -20,18 +20,15 @@ class WordGuess
 		letters << letter
 		letters
 	end
+
+	def hide_word
+		word.tr!(word, "-")
+  		word.tr!(word.upcase, "-")
+  		word
+	end
 end
 
 
-# Computer program - Characteristics - Attributes
-# At the start of the game I will need:
-# A word to guess - from player 1
-# know how many guesses player 2 has
-# A way to tell when the game is over
-
-# Behavior - methods
-# A place to store wrong answers ---- could be its own method?
-#---------place holder to know what pseudocode I am working on----------
 # --Repeated guesses do not count against the user
 # a way to check if a letter has been guessed
 # 		if so the number of guesses stays the same
@@ -40,7 +37,7 @@ end
 # --Guesses are limited and the number of guesses available is related to the length of the word.
 # A way to count how many guesses the player has
 
-
+#---------place holder to know what pseudocode I am working on----------
 # --The guessing player receives continual feedback on the current state of the word. So if the secret word is "unicorn", the user will start out seeing something like "_ _ _ _ _ _ _", which would become "_ _ _ c _ _ _" after the user enters a guess of "c".
 # a way to replace player one's word (sercert word) with symbols
 

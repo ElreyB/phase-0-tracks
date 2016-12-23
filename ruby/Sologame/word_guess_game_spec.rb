@@ -18,4 +18,8 @@ describe WordGuess do
 	it "stores letters" do
 		expect(word.wrong_letter("w")).to eq ["w"]
 	end
+
+	it "word to dashes" do 
+		expect(word.hide_word).to eq "-------"
+	end
 end
