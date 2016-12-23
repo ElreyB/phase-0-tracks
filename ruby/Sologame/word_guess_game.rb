@@ -1,9 +1,10 @@
 class WordGuess
-	attr_reader :word, :guesses
+	attr_reader :word, :guesses, :game_over
 
 	def initialize(word)
 		@word = word
 		@guesses = word.length
+		@game_over = false
 	end
 
 	def guessing_word
