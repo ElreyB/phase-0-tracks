@@ -1,3 +1,7 @@
+#6.5 pairing
+#Elrey and Ally
+
+
 class TodoList
 	attr_reader :list
 
