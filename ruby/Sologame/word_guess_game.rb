@@ -5,7 +5,9 @@ end
 # At the start of the game I will need:
 # A word to guess - from player 1
 # know how many guesses player 2 has
-# A place to store wrong answers
+
+# A place to store wrong answers ---- could be its own method?
+
 # A way to tell when the game is over
 
 # --One user can enter a word
