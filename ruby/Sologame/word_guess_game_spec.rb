@@ -1,0 +1,1 @@
+require_relative 'Word_guess'
