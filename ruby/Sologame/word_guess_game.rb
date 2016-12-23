@@ -1,5 +1,18 @@
 class WordGuess
+	attr_reader :word, 
+
+	def initialize(word)
+		@word = word
+		
+	end
+
+	def guessing_word
+		word
+	end
+
+
 end
+
 
 # Computer program - Characteristics - Attributes
 # At the start of the game I will need:
