@@ -1,1 +1,2 @@
-require_relative 'Word_guess'
+require_relative 'WordGuess'
+

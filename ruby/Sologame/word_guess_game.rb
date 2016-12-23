@@ -1,26 +1,23 @@
-class Word_guess
+class WordGuess
 end
 
 # Computer program - Characteristics - Attributes
 # At the start of the game I will need:
 # A word to guess - from player 1
 # know how many guesses player 2 has
-
-# A place to store wrong answers ---- could be its own method?
-
 # A way to tell when the game is over
 
-# --One user can enter a word
-# A place to store the word to be guessed
-
-# --Guesses are limited and the number of guesses available is related to the length of the word.
-# A way to count how many guesses the player has
+# A place to store wrong answers ---- could be its own method?
 
 # Behavior - methods
 # --Repeated guesses do not count against the user
 # a way to check if a letter has been guessed
 # 		if so the number of guesses stays the same
 # 		if not the number of guesses goes down by 1
+
+# --Guesses are limited and the number of guesses available is related to the length of the word.
+# A way to count how many guesses the player has
+
 
 # --The guessing player receives continual feedback on the current state of the word. So if the secret word is "unicorn", the user will start out seeing something like "_ _ _ _ _ _ _", which would become "_ _ _ c _ _ _" after the user enters a guess of "c".
 # a way to replace player one's word (sercert word) with symbols
