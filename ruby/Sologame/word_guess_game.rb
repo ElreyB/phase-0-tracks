@@ -1,5 +1,6 @@
 class WordGuess
 	attr_reader :word, :guesses, :game_over, :letters, :secert_word 
+
 # Computer program - Characteristics - Attributes
 	def initialize(word)
 		@word = word
@@ -22,22 +23,24 @@ class WordGuess
 	end
 
 	def hide_word
-		@secert_word = guessing_word.tr(word, "-")
-  		@secert_word 
+		secert_word = guessing_word.tr(word, "-")
+  		secert_word 
 	end
 
 	def show_letter(letter)
-		if word.include?(letter)
-			hidden_index = word.index(letter)
-			@secert_word[hidden_index]=letter
-			unhidden_letter = secert_word
+		p guessing_word
+		for i in 0..guessing_word.length-1
+
+		if guessing_word[i] == letter
+		      secert_word[i] = letter
+		      secert_word
 		end
-		if word.include?(letter.upcase)
-			hidden_index = word.index(letter.upcase)
-			@secert_word[hidden_index]=letter.upcase
-			unhidden_letter = secert_word
-		end
-		unhidden_letter = secert_word
+		if guessing_word[i] == letter.upcase
+		      secert_word[i] = letter.upcase
+		      secert_word
+		end 
+		end 
+	unhidden_letter = @secert_word
 	end
 end
 
