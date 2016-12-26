@@ -24,6 +24,7 @@ describe WordGuess do
 	end
 
 	it "replace dash with letter" do 
+		word.hide_word
 		expect(word.show_letter("u")).to eq "u------"
 	end
 end
