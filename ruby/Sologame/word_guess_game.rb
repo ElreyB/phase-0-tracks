@@ -50,8 +50,10 @@ class WordGuess
 	def is_over?
 		if guesses_left <= 0
 			@game_over = true
+			
 		elsif unhidden_letter == guessing_word
 			@game_over = true
+			
 		else
 			@game_over
 		end
@@ -88,8 +90,10 @@ puts "Player 1 enter a word"
 
 	p wordguess
 # another user attempts to guess the word by guessing letters one at a time
-puts "Player 2 your word is '-------'"
-# "Your letter guess is: "
+puts "Player 2 your word is: '#{wordguess.hide_word}'"
+puts "Your letter guess is: "
+	guessing_letter = gets.chomp
+puts wordguess.show_letter(guessing_letter)
 # 	if the letter guess is in the word
 # 		then show the word with the letter in placel : "---c---"
 # 	if the letter guess is not in the word
@@ -97,6 +101,8 @@ puts "Player 2 your word is '-------'"
 # 		player 2 guess limit goes down by one
 # Player 2 can keep guessing until 
 # 	the word is completed
+
+# puts wordguess.is_over?
 # The user should get a congratulatory message if they win 
 # "CONGRADULATIONS YOU WIN!!!!!!"	
 # 	or
