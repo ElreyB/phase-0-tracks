@@ -17,7 +17,7 @@ class WordGuess
 		guesses 
 	end
 
-	def guesses?
+	def guesses_left
 		@guesses -= 1
 		guesses
 	end
@@ -25,6 +25,7 @@ class WordGuess
 	def wrong_letter(letter)
 		letters << letter
 		letters
+
 	end
 
 	def hide_word
@@ -45,27 +46,16 @@ class WordGuess
 		end 
 	unhidden_letter = secret_word
 	end
+
+
 end
 
 
-
+#---------place holder to know what pseudocode I am working on----------
 # --Repeated guesses do not count against the user
 # a way to check if a letter has been guessed
 # 		if so the number of guesses stays the same
 # 		if not the number of guesses goes down by 1
-
-#---------place holder to know what pseudocode I am working on----------
-# --Guesses are limited and the number of guesses available is related to the length of the word.
-# A way to count how many guesses the player has
-
-
-
-
-
-# Method:
-# input:
-# steps:
-# output:
 
 # #user interface
 # Game intro:

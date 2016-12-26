@@ -29,6 +29,10 @@ describe WordGuess do
 	end
 
 	it "guesses down by 1" do 
-		expect(word.guesses?).to eq 6
+		expect(word.guesses_left).to eq 6
 	end
+
+	# it "is game over" do
+	# 	expect(word.is_over?).to eq false
+	# end
 end
