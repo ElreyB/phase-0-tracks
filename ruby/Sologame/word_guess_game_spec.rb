@@ -32,7 +32,12 @@ describe WordGuess do
 		expect(word.guesses_left).to eq 6
 	end
 
-	# it "is game over" do
-	# 	expect(word.is_over?).to eq false
-	# end
+	 it "is game over" do
+	 	expect(word.is_over?).to eq false
+	 end
+
+	 it "is game over" do
+	 	guesses = 0
+	 	expect(word.is_over?).to eq true
+	 end
 end

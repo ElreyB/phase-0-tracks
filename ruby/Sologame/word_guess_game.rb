@@ -47,6 +47,17 @@ class WordGuess
 	unhidden_letter = secret_word
 	end
 
+	def is_over?
+		if guesses_leftq == 0
+			@game_over = true
+		elsif secret_word == guessing_word
+			@game_over = true
+		else
+			@game_over
+		end
+		@game_over			
+	end
+
 
 end
 
@@ -56,6 +67,8 @@ end
 # a way to check if a letter has been guessed
 # 		if so the number of guesses stays the same
 # 		if not the number of guesses goes down by 1
+
+# A way to tell when he game is over
 
 # #user interface
 # Game intro:
