@@ -37,7 +37,24 @@ describe WordGuess do
 	 end
 
 	 it "is game over" do
-	 	guesses = 0
+	 	for i in 0..word.guesses-1
+	 	word.guesses_left
+	 	end
+	 	expect(word.is_over?).to eq true
+	 end
+
+	 it "is game over" do
+	 	p word.guessing_word
+	 	p word.hide_word
+	 	p word.show_letter("u")
+	 	p word.show_letter("n")
+	 	p word.show_letter("i")
+	 	p word.unhidden_letter == "unicorn"
+	 	p word.show_letter("o")
+	 	p word.show_letter("c")
+	 	p word.show_letter("r")
+	 	p word.unhidden_letter
+	 	p word.unhidden_letter == "unicorn"
 	 	expect(word.is_over?).to eq true
 	 end
 end

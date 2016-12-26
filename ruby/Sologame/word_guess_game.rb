@@ -1,5 +1,5 @@
 class WordGuess
-	attr_reader :word, :guesses, :game_over, :letters, :secret_word
+	attr_reader :word, :guesses, :game_over, :letters, :secret_word, :unhidden_letter
 	attr_writer :secret_word
 # Computer program - Characteristics - Attributes
 	def initialize(word)
@@ -44,13 +44,13 @@ class WordGuess
 			     secret_word
 			end 
 		end 
-	unhidden_letter = secret_word
+	@unhidden_letter = secret_word
 	end
 
 	def is_over?
-		if guesses_leftq == 0
+		if guesses_left <= 0
 			@game_over = true
-		elsif secret_word == guessing_word
+		elsif unhidden_letter == guessing_word
 			@game_over = true
 		else
 			@game_over
