@@ -72,14 +72,14 @@ end
 
 # #user interface
 # Game intro:
-# "Welcome to the 'Guess the Word' game. A two player guessing game"
-# "One player will enter a word to be guessed"
-# "the second player will guess the word "
-# "the rules are as follow:"
-# "Player two guesses the word one letter at a time"
-# "Your guesses are limited to length of the word. So if the word is 'dog' you have three guess"
-# "A repeated guess will not count towards your guess limit"
-# "ok let play!"
+puts "Welcome to the 'Guess the Word' game. A two player guessing game."
+puts "Player will enter a word to be guessed"
+puts "The second player will guess the word "
+puts "The rules are as follow:"
+puts "Player two guesses the word one letter at a time"
+puts "Your guesses are limited to length of the word. So if the word is 'dog' you have three guesses"
+puts "A repeated guess will not count towards your guess limit"
+puts "Okay, LET'S PLAY!"
 
 # One user can enter a word 
 # "Player one enter a word" (sercet word)
