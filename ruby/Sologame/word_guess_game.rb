@@ -17,6 +17,11 @@ class WordGuess
 		guesses 
 	end
 
+	def guesses?
+		@guesses -= 1
+		guesses
+	end
+
 	def wrong_letter(letter)
 		letters << letter
 		letters
@@ -49,16 +54,13 @@ end
 # 		if so the number of guesses stays the same
 # 		if not the number of guesses goes down by 1
 
-
+#---------place holder to know what pseudocode I am working on----------
 # --Guesses are limited and the number of guesses available is related to the length of the word.
 # A way to count how many guesses the player has
 
 
-#---------place holder to know what pseudocode I am working on----------
-# a way to 
-# 	if player two letter is in the sercert word
-# 		player two see his letter inplace of the symbol
-# 	Otherwise, player two sees the word in symbol form
+
+
 
 # Method:
 # input:

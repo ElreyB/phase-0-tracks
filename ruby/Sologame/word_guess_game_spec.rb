@@ -25,6 +25,10 @@ describe WordGuess do
 
 	it "replace dash with letter" do 
 		word.hide_word
-		expect(word.show_letter("u")).to eq "u------"
+		expect(word.show_letter("n")).to eq "-n----n"
+	end
+
+	it "guesses down by 1" do 
+		expect(word.guesses?).to eq 6
 	end
 end
