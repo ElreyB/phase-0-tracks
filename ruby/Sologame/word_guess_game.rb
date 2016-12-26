@@ -82,10 +82,13 @@ puts "A repeated guess will not count towards your guess limit"
 puts "Okay, LET'S PLAY!"
 
 # One user can enter a word 
-# "Player one enter a word" (sercet word)
+puts "Player 1 enter a word"
+		word = gets.chomp #(sercet word)
+	wordguess = WordGuess.new(word)
 
+	p wordguess
 # another user attempts to guess the word by guessing letters one at a time
-# "your word is '-------'"
+puts "Player 2 your word is '-------'"
 # "Your letter guess is: "
 # 	if the letter guess is in the word
 # 		then show the word with the letter in placel : "---c---"
