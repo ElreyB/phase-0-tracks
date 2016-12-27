@@ -93,8 +93,6 @@ puts "--------------------------------------------------------------------------
  wordguess.secret_word
 
 until wordguess.game_over == true
-
-
 	if wordguess.guessing_word.include?guessing_letter.downcase
 		wordguess.show_letter(guessing_letter.downcase)
 	 	puts "Keep up the good work."
@@ -126,6 +124,7 @@ puts "You have #{wordguess.guesses} guesses left and your word is: '#{wordguess.
 puts "Your letter guess is: "
 	guessing_letter = gets.chomp
 end
+
 puts "---------------------------------------------------------------------------------"
 if wordguess.secret_word == wordguess.guessing_word
 	puts wordguess.secret_word
