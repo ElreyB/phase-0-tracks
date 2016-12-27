@@ -25,7 +25,6 @@ class WordGuess
 	def wrong_letter(letter)
 		letters << letter
 		letters
-
 	end
 
 	def hide_word
@@ -36,6 +35,7 @@ class WordGuess
 	def show_letter(letter)
 		for i in 0..guessing_word.length-1
 			if guessing_word[i] == letter
+
 			     secret_word[i] = letter
 			     secret_word
 			end
@@ -74,64 +74,65 @@ end
 
 # #user interface
 # Game intro:
-puts "Welcome to the 'Guess the Word' game. A two player guessing game."
-puts "Player will enter a word to be guessed"
-puts "The second player will guess the word "
-puts "The rules are as follow:"
-puts "Player two guesses the word one letter at a time"
-puts "Your guesses are limited to length of the word. So if the word is 'dog' you have three guesses"
-puts "A repeated guess will not count towards your guess limit"
-puts "Okay, LET'S PLAY!"
+# puts "Welcome to the 'Guess the Word' game. A two player guessing game."
+# puts "Player will enter a word to be guessed"
+# puts "The second player will guess the word "
+# puts "The rules are as follow:"
+# puts "Player two guesses the word one letter at a time"
+# puts "Your guesses are limited to length of the word. So if the word is 'dog' you have three guesses"
+# puts "A repeated guess will not count towards your guess limit"
+# puts "Okay, LET'S PLAY!"
 
-# One user can enter a word 
-puts "Player 1 enter a word"
-		word = gets.chomp #(sercet word)
-	wordguess = WordGuess.new(word)
+# # One user can enter a word 
+# puts "Player 1 enter a word"
+# 		word = gets.chomp #(sercet word)
+# 	wordguess = WordGuess.new(word)
 
-	p wordguess
+# 	p wordguess
 
-until wordguess.game_over == true
-# another user attempts to guess the word by guessing letters one at a time
-puts "Player 2 you have #{wordguess.guesses} guesses and your word is: '#{wordguess.hide_word}'"
-puts "Your letter guess is: "
-	guessing_letter = gets.chomp
+# until wordguess.game_over == true
+# # another user attempts to guess the word by guessing letters one at a time
+# puts "Player 2 you have #{wordguess.guesses} guesses and your word is: '#{wordguess.hide_word}'"
+# puts "Your letter guess is: "
+# 	guessing_letter = gets.chomp
 
-	if wordguess.guessing_word.include?guessing_letter
-	 	puts wordguess.show_letter(guessing_letter)
-	 	puts "Keep up the good work."
-	else
-		if wordguess.letters.include?guessing_letter
-			puts wordguess.secret_word
-	 		puts "Keep trying."
-	 		p wordguess.letters
-	 	else
-		 	wordguess.wrong_letter(guessing_letter)
-		 	p wordguess.guesses_left 
-		 	puts wordguess.secret_word
-		 	puts "Keep trying."
-		 	p wordguess.letters
-		 end
-	end
-	p wordguess.secret_word
-	p wordguess.letters
-	wordguess.is_over?
-end
+# 	if wordguess.guessing_word.include?guessing_letter
+# 	 	puts wordguess.show_letter(guessing_letter)
+# 	 	puts "Keep up the good work."
 
-# 	if the letter guess is in the word
-# 		then show the word with the letter in placel : "---c---"
-# 	if the letter guess is not in the word
-# 		then show the word in sercet
-# 		player 2 guess limit goes down by one
-# Player 2 can keep guessing until 
-# 	the word is completed
+# 	else
+# 		if wordguess.letters.include?guessing_letter
+# 			puts wordguess.secret_word
+# 	 		puts "Keep trying."
+# 	 		p wordguess.letters
+# 	 	else
+# 		 	wordguess.wrong_letter(guessing_letter)
+# 		 	p wordguess.guesses_left 
+# 		 	puts wordguess.secret_word
+# 		 	puts "Keep trying."
+# 		 	p wordguess.letters
+# 		 end
+# 	end
+# 	p wordguess.secret_word
+# 	p wordguess.letters
+# 	wordguess.is_over?
+# end
 
-# puts wordguess.is_over?
-# The user should get a congratulatory message if they win 
-# "CONGRADULATIONS YOU WIN!!!!!!"	
-# 	or
-# 	player 2 uses all their guesses
-# and a taunting message if they lose.
-# "Better luck next time"
+# # 	if the letter guess is in the word
+# # 		then show the word with the letter in placel : "---c---"
+# # 	if the letter guess is not in the word
+# # 		then show the word in sercet
+# # 		player 2 guess limit goes down by one
+# # Player 2 can keep guessing until 
+# # 	the word is completed
+
+# # puts wordguess.is_over?
+# # The user should get a congratulatory message if they win 
+# # "CONGRADULATIONS YOU WIN!!!!!!"	
+# # 	or
+# # 	player 2 uses all their guesses
+# # and a taunting message if they lose.
+# # "Better luck next time"
 
 
 
