@@ -94,7 +94,14 @@ puts "Player 2 you have #{wordguess.guesses} guesses and your word is: '#{wordgu
 puts "Your letter guess is: "
 	guessing_letter = gets.chomp
 
-puts wordguess.show_letter(guessing_letter)
+	if wordguess.guessing_word.include?guessing_letter
+	 	puts wordguess.show_letter(guessing_letter)
+	 	puts "Keep up the good work."
+	else
+	 	wordguess.wrong_letter(guessing_letter)
+	 	puts wordguess.secret_word
+	 	puts "Keep trying."
+	end
 
 
 # 	if the letter guess is in the word
