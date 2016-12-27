@@ -94,8 +94,12 @@ puts "------------------"
 until wordguess.game_over == true
 
 
-	if wordguess.guessing_word.include?guessing_letter
-		wordguess.show_letter(guessing_letter)
+	if wordguess.guessing_word.include?guessing_letter.downcase
+		wordguess.show_letter(guessing_letter.downcase)
+	 	puts "Keep up the good work."
+	 	wordguess.secret_word
+	elsif wordguess.guessing_word.include?guessing_letter.upcase
+		wordguess.show_letter(guessing_letter.upcase)
 	 	puts "Keep up the good work."
 	 	wordguess.secret_word
 	else
@@ -117,7 +121,7 @@ until wordguess.game_over == true
 	if wordguess.is_over? == true
     	    break
  	end
-puts "Player 2 you have #{wordguess.guesses} guesses left and your word is: '#{wordguess.secret_word}'"
+puts "You have #{wordguess.guesses} guesses left and your word is: '#{wordguess.secret_word}'"
 puts "Your letter guess is: "
 	guessing_letter = gets.chomp
 end
