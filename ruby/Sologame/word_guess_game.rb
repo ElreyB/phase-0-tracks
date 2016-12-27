@@ -48,7 +48,7 @@ class WordGuess
 	end
 
 	def is_over?
-		if guesses_left <= 0
+		if guesses <= 0
 			@game_over = true
 			
 		elsif unhidden_letter == guessing_word
