@@ -70,8 +70,9 @@ puts "Welcome to the 'Guess the Word' game."
 puts "A two player guessing game were player 1 will enter a word to be guessed and player 2 will guess the word."
 puts "The rules are as follow:"
 puts "Player 2 guesses the word one letter at a time"
-puts "Your guesses are limited to length of the word. So if the word is 'dog' you have three guesses"
-puts "A repeated guess will not count towards your guess limit"
+puts "Your guesses are limited to length of the word. So if the word is 'dog' you have three guesses."
+puts "Blanks, numbers, symbols, typing more than one letter will count towards your guess limit. "
+puts "A repeated guess will not count towards your guess limit."
 puts "Okay, LET'S PLAY!"
 
 # One user can enter a word 
@@ -83,7 +84,7 @@ puts "Player 1 enter a word"
 
 1000.times{print "Guess the Word "}
 puts "\n"
-puts "------------------"
+puts "---------------------------------------------------------------------------------"
  puts "Player 2 you have #{wordguess.guesses} guesses and your word is: '#{wordguess.hide_word}'"
  puts "Your letter guess is: "
  guessing_letter = gets.chomp
