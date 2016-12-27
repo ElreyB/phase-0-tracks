@@ -90,10 +90,13 @@ puts "Player 1 enter a word"
 
 	p wordguess
 # another user attempts to guess the word by guessing letters one at a time
-puts "Player 2 your word is: '#{wordguess.hide_word}'"
+puts "Player 2 you have #{wordguess.guesses} guesses and your word is: '#{wordguess.hide_word}'"
 puts "Your letter guess is: "
 	guessing_letter = gets.chomp
+
 puts wordguess.show_letter(guessing_letter)
+
+
 # 	if the letter guess is in the word
 # 		then show the word with the letter in placel : "---c---"
 # 	if the letter guess is not in the word
