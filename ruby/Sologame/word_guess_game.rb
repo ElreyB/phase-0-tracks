@@ -35,7 +35,6 @@ class WordGuess
 	def show_letter(letter)
 		for i in 0..guessing_word.length-1
 			if guessing_word[i] == letter
-
 			     secret_word[i] = letter
 			     secret_word
 			end
@@ -49,11 +48,9 @@ class WordGuess
 
 	def is_over?
 		if guesses <= 0
-			@game_over = true
-			
+			@game_over = true	
 		elsif secret_word == guessing_word
-			@game_over = true
-			
+			@game_over = true	
 		else
 			@game_over
 		end
