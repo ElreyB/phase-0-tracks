@@ -59,26 +59,17 @@ class WordGuess
 		end
 		@game_over			
 	end
-
-
 end
 
 
 #---------place holder to know what pseudocode I am working on----------
-# --Repeated guesses do not count against the user
-# a way to check if a letter has been guessed
-# 		if so the number of guesses stays the same
-# 		if not the number of guesses goes down by 1
-
-# A way to tell when he game is over
 
 # #user interface
 # Game intro:
-puts "Welcome to the 'Guess the Word' game. A two player guessing game."
-puts "Player will enter a word to be guessed"
-puts "The second player will guess the word "
+puts "Welcome to the 'Guess the Word' game."
+puts "A two player guessing game were player 1 will enter a word to be guessed and player 2 will guess the word."
 puts "The rules are as follow:"
-puts "Player two guesses the word one letter at a time"
+puts "Player 2 guesses the word one letter at a time"
 puts "Your guesses are limited to length of the word. So if the word is 'dog' you have three guesses"
 puts "A repeated guess will not count towards your guess limit"
 puts "Okay, LET'S PLAY!"
@@ -90,7 +81,7 @@ puts "Player 1 enter a word"
 
 	
 
-100.times{print "Guesss Word Game "}
+1000.times{print "Guess the Word "}
 puts "\n"
 puts "------------------"
  puts "Player 2 you have #{wordguess.guesses} guesses and your word is: '#{wordguess.hide_word}'"
@@ -137,21 +128,7 @@ else
   puts "Better luck next time"
 end
 
-# 	if the letter guess is in the word
-# 		then show the word with the letter in placel : "---c---"
-# 	if the letter guess is not in the word
-# 		then show the word in sercet
-# 		player 2 guess limit goes down by one
-# Player 2 can keep guessing until 
-# 	the word is completed
-
-# puts wordguess.is_over?
-# The user should get a congratulatory message if they win 
-# "CONGRADULATIONS YOU WIN!!!!!!"	
-# 	or
-# 	player 2 uses all their guesses
-# and a taunting message if they lose.
-# "Better luck next time"
+#End of program
 
 
 

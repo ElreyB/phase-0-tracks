@@ -49,12 +49,11 @@ describe WordGuess do
 	 	p wordguess.show_letter("u")
 	 	p wordguess.show_letter("n")
 	 	p wordguess.show_letter("i")
-	 	p wordguess.unhidden_letter == "unicorn"
+	 	p wordguess.secret_word == "unicorn"
 	 	p wordguess.show_letter("o")
 	 	p wordguess.show_letter("c")
 	 	p wordguess.show_letter("r")
-	 	p wordguess.unhidden_letter
-	 	p wordguess.unhidden_letter == "unicorn"
+	 	p wordguess.secret_word == "unicorn"
 	 	expect(wordguess.is_over?).to eq true
 	 end
 end
