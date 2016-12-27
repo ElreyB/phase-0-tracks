@@ -1,6 +1,6 @@
 class WordGuess
-	attr_reader :word, :guesses, :game_over, :letters, :secret_word, :unhidden_letter
-	attr_writer :secret_word
+	attr_reader :word, :guesses, :game_over, :letters, :secret_word, :unhidden_letter 
+	attr_writer :secret_word, :guesses
 # Computer program - Characteristics - Attributes
 	def initialize(word)
 		@word = word
@@ -89,6 +89,8 @@ puts "Player 1 enter a word"
 	wordguess = WordGuess.new(word)
 
 	p wordguess
+
+until wordguess.game_over == true
 # another user attempts to guess the word by guessing letters one at a time
 puts "Player 2 you have #{wordguess.guesses} guesses and your word is: '#{wordguess.hide_word}'"
 puts "Your letter guess is: "
@@ -98,11 +100,22 @@ puts "Your letter guess is: "
 	 	puts wordguess.show_letter(guessing_letter)
 	 	puts "Keep up the good work."
 	else
-	 	wordguess.wrong_letter(guessing_letter)
-	 	puts wordguess.secret_word
-	 	puts "Keep trying."
+		if wordguess.letters.include?guessing_letter
+			puts wordguess.secret_word
+	 		puts "Keep trying."
+	 		p wordguess.letters
+	 	else
+		 	wordguess.wrong_letter(guessing_letter)
+		 	p wordguess.guesses_left 
+		 	puts wordguess.secret_word
+		 	puts "Keep trying."
+		 	p wordguess.letters
+		 end
 	end
-
+	p wordguess.secret_word
+	p wordguess.letters
+	wordguess.is_over?
+end
 
 # 	if the letter guess is in the word
 # 		then show the word with the letter in placel : "---c---"
