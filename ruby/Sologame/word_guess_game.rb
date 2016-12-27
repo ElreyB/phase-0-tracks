@@ -1,5 +1,5 @@
 class WordGuess
-	attr_reader :word, :guesses, :game_over, :letters, :secret_word, :unhidden_letter 
+	attr_reader :word, :guesses, :game_over, :letters, :secret_word
 	attr_writer :secret_word, :guesses
 # Computer program - Characteristics - Attributes
 	def initialize(word)
@@ -44,14 +44,14 @@ class WordGuess
 			     secret_word
 			end 
 		end 
-	@unhidden_letter = secret_word
+	 secret_word
 	end
 
 	def is_over?
 		if guesses <= 0
 			@game_over = true
 			
-		elsif unhidden_letter == guessing_word
+		elsif secret_word == guessing_word
 			@game_over = true
 			
 		else
@@ -98,43 +98,39 @@ puts "------------------"
  guessing_letter = gets.chomp
  wordguess.guesses
  wordguess.letters
-p wordguess.secret_word
+ wordguess.secret_word
 
 until wordguess.game_over == true
 
 
 	if wordguess.guessing_word.include?guessing_letter
-	 	puts wordguess.show_letter(guessing_letter)
+		wordguess.show_letter(guessing_letter)
 	 	puts "Keep up the good work."
-	 	 wordguess.secret_word
+	 	wordguess.secret_word
 	else
 		if wordguess.letters.include?guessing_letter
-			puts wordguess.secret_word
-  	  if wordguess.is_over? == true
-  	    break
-  	  end
+	  	  	if wordguess.is_over? == true
+	  	    	break
+	  	  	end
 	 		puts "Keep trying."
-	 	
 	 	else
 		 	wordguess.wrong_letter(guessing_letter)
-		 	p wordguess.guesses_left
+		 	 wordguess.guesses_left
     	  if wordguess.is_over? == true
     	    break
     	  end
-		 	puts wordguess.secret_word
 		 	puts "Keep trying."
-		 	
 		 end
 	end
 
-	  if wordguess.is_over? == true
+	if wordguess.is_over? == true
     	    break
-    end
-	puts "Player 2 you have #{wordguess.guesses} guesses left and your word is: '#{wordguess.secret_word}'"
+ 	end
+puts "Player 2 you have #{wordguess.guesses} guesses left and your word is: '#{wordguess.secret_word}'"
 puts "Your letter guess is: "
 	guessing_letter = gets.chomp
-
 end
+
 if wordguess.secret_word == wordguess.guessing_word
   puts "CONGRADULATIONS YOU WIN!!!!!!"
 else
