@@ -126,11 +126,13 @@ puts "You have #{wordguess.guesses} guesses left and your word is: '#{wordguess.
 puts "Your letter guess is: "
 	guessing_letter = gets.chomp
 end
-
+puts "---------------------------------------------------------------------------------"
 if wordguess.secret_word == wordguess.guessing_word
-  puts "CONGRADULATIONS YOU WIN!!!!!!"
+	puts wordguess.secret_word
+	puts "CONGRADULATIONS YOU WIN!!!!!!"
 else
-  puts "Better luck next time"
+	puts wordguess.guessing_word
+	puts "Better luck next time."
 end
 
 #End of program
