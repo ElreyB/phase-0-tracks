@@ -14,9 +14,22 @@ function reverse(string) {
 	return newString;
 }
 
+// Driver code
 var nameReverse = reverse("Elrey");
 console.log(nameReverse);
 console.log("---------");
 var phaseReverse = reverse("All the world is a stage and we are its players");
 console.log(phaseReverse);
 console.log("---------");
+
+if (1 == 1) {
+	console.log(nameReverse);
+}else {
+	console.log(phaseReverse);
+}
+
+if (1 != 1) {
+	console.log(nameReverse);
+}else {
+	console.log(phaseReverse);
+}
