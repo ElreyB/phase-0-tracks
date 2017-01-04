@@ -1,3 +1,4 @@
+// Release 0
 // Function: that takes an array of words or phrases 
 // 			and returns the longest word or phrase in the array
 // input: an array of words or phrases
@@ -23,16 +24,40 @@ function longestWord(list) {
 	} 
 	return word;
 }
+
+// Release 1
+// Function: that takes two objects and checks to see if the 
+//   		 objects share at least one key-value pair.
+// input: two objects
+// steps: have empty arrays to hold the keys and values of each object
+		// put the keys and values of object in an array
+		// loop over the arrays to compare them
+		// if there is an element (an object key value pair) that are the same
+			// return true
+		// else return false
+// output: a boolean
+
 // check length of phrases
-for (var i = 0; i < phrases.length; i++) {
-	console.log(phrases[i].length);
-}
+// for (var i = 0; i < phrases.length; i++) {
+// 	console.log(phrases[i].length);
+// }
 // driver code
 console.log(longestWord(phrases));
 console.log("--------------------");
 // check length of names
-for (var i = 0; i < names.length; i++) {
-	console.log(names[i].length);
-}
+// for (var i = 0; i < names.length; i++) {
+// 	console.log(names[i].length);
+// }
 // driver code
 console.log(longestWord(names));
+
+
+
+
+
+
+
+
+
+
+
