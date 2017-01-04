@@ -11,6 +11,7 @@
 
 var phrases = ["long phrase","longest phrase","longer phrase"];
 var names = ["Elrey", "Bob", "Bill Clinton", "Jack Daniels", "Cindy Smith"];
+// longestWord function will return the first longest word in an array.
 function longestWord(list) {
 	valueToCompare = 0;
 	word = "";
