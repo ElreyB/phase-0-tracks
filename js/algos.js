@@ -14,8 +14,8 @@ var phrases = ["long phrase","longest phrase","longer phrase"];
 var names = ["Elrey", "Bob", "Bill Clinton", "Jack Daniels", "Cindy Smith"];
 // longestWord function will return the first longest word in an array.
 function longestWord(list) {
-	valueToCompare = 0;
-	word = "";
+	var valueToCompare = 0;
+	var word = "";
 	for (var i = 0; i < list.length; i++) {
 		if (list[i].length > valueToCompare) {
 			valueToCompare = list[i].length;
@@ -36,6 +36,12 @@ function longestWord(list) {
 			// return true
 		// else return false
 // output: a boolean
+
+function compare(object1, object2) {
+	var arr1 = [];
+	var arr2 = [];
+
+}
 
 // check length of phrases
 // for (var i = 0; i < phrases.length; i++) {
