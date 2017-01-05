@@ -30,7 +30,7 @@ function longestWord(list) {
 //   		 objects share at least one key-value pair.
 // input: two objects
 // steps: have empty arrays to hold the keys and values of each object
-		// put the keys and values of object in an array
+		// put the keys and values pairs of object in an array
 		// loop over the arrays to compare them
 		// if there is an element (an object key value pair) that are the same
 			// return true
@@ -40,7 +40,12 @@ function longestWord(list) {
 function compare(object1, object2) {
 	var arr1 = [];
 	var arr2 = [];
-	
+	for (var prop in object1) {
+		arr1.push(prop, object1[prop]);
+	}
+	for (var key in object2) {
+		arr2.push(key, object2[key]);
+	}
 
 }
 
