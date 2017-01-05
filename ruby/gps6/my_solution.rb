@@ -101,8 +101,20 @@ end
 #=======================================================================
 # Reflection Section
 # What are the differences between the two different hash syntaxes shown in the state_data file?
+#- One hash uses strings for its keys while the second hash uses symbols for keys
+
 # What does require_relative do? How is it different from require?
+#- Require_relative connects files in the same directory 
+#- Require connects files outside the directory
+
 # What are some ways to iterate through a hash?
+#- You can use .each or .map
+
 # When refactoring virus_effects, what stood out to you about the variables, if anything?
+#- That the variable were repeating. In the virus_effect instance method it returns the output of predicted_death and
+# speed_of_spread instance method. These instance methods uses the instance variable so there is no need to use them as
+# arugments. 
+
 # What concept did you most solidify in this challenge?
+# I think the concept of instance varibles became more solidify. 
 
