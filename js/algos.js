@@ -66,26 +66,45 @@ function compare(object1, object2) {
 		// create random words of random length
 		// add random words to array
 // output: an array of strings of the given length
+function wordMaker(number) {
+  var wordsList = [];
+  for (var n = 0; n < number; n++ ){
+      var word = "";
+      var letters = "abcdefghijklmnopqrstuvwxyz";
+      var wordLength = Math.floor(Math.random() * (10 - 1)) + 1;
+      for( var i=0; i < wordLength; i++ ){
+          word += letters.charAt(Math.floor(Math.random() * letters.length));
+      }
+  wordsList.push(word);
+  }
+  return wordsList;
+}
+
+
+
+
+// driver code  
+console.log(wordMaker(3));
+console.log(wordMaker(8));
+console.log(wordMaker(20));
 
 
 
 
 
-// driver code
+console.log("--------------------");
 // check length of phrases elements
 // for (var i = 0; i < phrases.length; i++) {
 // 	console.log(phrases[i].length);
 // }
 // driver code
 console.log(longestWord(phrases));
-console.log("--------------------");
 // check length of names elements
 // for (var i = 0; i < names.length; i++) {
 // 	console.log(names[i].length);
 // }
-
 console.log(longestWord(names));
-
+console.log("--------------------");
 console.log(compare({name: "Steven", age: 54},{name: "Janet", age: 64}));
 console.log(compare({color: "Pink", animal: "dog"},{name: "Janet", age: 64}));
 
