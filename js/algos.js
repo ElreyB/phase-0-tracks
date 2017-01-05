@@ -54,24 +54,40 @@ function compare(object1, object2) {
 	return false;
 }
 
-console.log(compare({name: "Steven", age: 54},{name: "Janet", age: 64}));
-console.log(compare({color: "Pink", animal: "dog"},{name: "Janet", age: 64}));
+// Release 2
+// Function: takes an integer for length, and builds and returns an 
+//           array of strings of the given length. The words should be 
+			// of randomly varying length, with a minimum of 1 letter and a maximum of 10 letters
+// input: an integer
+// steps: have an empty array variable to hold words
+		// have a empty string variable to hold the random letters
+		// have a alphabet varible to grab letters from 
+		// for as many times the function arugment is
+		// create random words of random length
+		// add random words to array
+// output: an array of strings of the given length
 
 
-// check length of phrases
+
+
+
+// driver code
+// check length of phrases elements
 // for (var i = 0; i < phrases.length; i++) {
 // 	console.log(phrases[i].length);
 // }
 // driver code
 console.log(longestWord(phrases));
 console.log("--------------------");
-// check length of names
+// check length of names elements
 // for (var i = 0; i < names.length; i++) {
 // 	console.log(names[i].length);
 // }
-// driver code
+
 console.log(longestWord(names));
 
+console.log(compare({name: "Steven", age: 54},{name: "Janet", age: 64}));
+console.log(compare({color: "Pink", animal: "dog"},{name: "Janet", age: 64}));
 
 
 
