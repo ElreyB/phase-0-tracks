@@ -9,7 +9,6 @@
 					// the longest word value to compare to becomes the new compare value
 					// the temp variable value is that word
 // output: the longest word
-
 var phrases = ["long phrase","longest phrase","longer phrase"];
 var names = ["Elrey", "Bob", "Bill Clinton", "Jack Daniels", "Cindy Smith"];
 // longestWord function will return the first longest word in an array.
@@ -24,7 +23,6 @@ function longestWord(list) {
 	} 
 	return word;
 }
-
 // Release 1
 // Function: that takes two objects and checks to see if the 
 //   		 objects share at least one key-value pair.
@@ -36,7 +34,6 @@ function longestWord(list) {
 			// return true
 		// else return false
 // output: a boolean
-
 function compare(object1, object2) {
 	var arr1 = [];
 	var arr2 = [];
@@ -53,7 +50,6 @@ function compare(object1, object2) {
 	}
 	return false;
 }
-
 // Release 2
 // Function: takes an integer for length, and builds and returns an 
 //           array of strings of the given length. The words should be 
@@ -92,11 +88,6 @@ function wordMaker(number) {
 // console.log(wordMaker(3));
 // console.log(wordMaker(8));
 // console.log(wordMaker(20));
-
-
-
-
-
 
 // check length of phrases elements
 // for (var i = 0; i < phrases.length; i++) {
