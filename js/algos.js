@@ -46,8 +46,17 @@ function compare(object1, object2) {
 	for (var key in object2) {
 		arr2.push(key, object2[key]);
 	}
-
+	for (var i = 0; i < arr1.length; i++) {
+		if (arr1[i] == arr2[i]) {
+			return true;
+		}
+	}
+	return false;
 }
+
+console.log(compare({name: "Steven", age: 54},{name: "Janet", age: 64}));
+console.log(compare({color: "Pink", animal: "dog"},{name: "Janet", age: 64}));
+
 
 // check length of phrases
 // for (var i = 0; i < phrases.length; i++) {
