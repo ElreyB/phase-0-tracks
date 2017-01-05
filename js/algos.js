@@ -72,32 +72,38 @@ function wordMaker(number) {
       var word = "";
       var letters = "abcdefghijklmnopqrstuvwxyz";
       var wordLength = Math.floor(Math.random() * (10 - 1)) + 1;
-      for( var i=0; i < wordLength; i++ ){
+      for( var i = 0; i < wordLength; i++ ){
           word += letters.charAt(Math.floor(Math.random() * letters.length));
       }
   wordsList.push(word);
   }
   return wordsList;
 }
+//JavaScript methods
+// String.charAt(index) returns character at index
+// var string = "hello" -> string.charAt(2) -> "l"
+// Math.floor() returns the argument rounded down
+// Math.floor(45.6) -> 45
+// Math.random() retuns a between 0 (inclusive) and 1 (exclusive)
+// Math.random() -> 0.4736293
 
-
-
-
+// ================================================================================
 // driver code  
-console.log(wordMaker(3));
-console.log(wordMaker(8));
-console.log(wordMaker(20));
+// console.log(wordMaker(3));
+// console.log(wordMaker(8));
+// console.log(wordMaker(20));
 
 
 
 
 
-console.log("--------------------");
+
 // check length of phrases elements
 // for (var i = 0; i < phrases.length; i++) {
 // 	console.log(phrases[i].length);
 // }
 // driver code
+//Release )
 console.log(longestWord(phrases));
 // check length of names elements
 // for (var i = 0; i < names.length; i++) {
@@ -105,10 +111,17 @@ console.log(longestWord(phrases));
 // }
 console.log(longestWord(names));
 console.log("--------------------");
+//Release 1
 console.log(compare({name: "Steven", age: 54},{name: "Janet", age: 64}));
 console.log(compare({color: "Pink", animal: "dog"},{name: "Janet", age: 64}));
-
-
+console.log("--------------------");
+//Release 2
+for (var i = 0; i < 10; i++ ) {
+	var list = wordMaker(5);
+	console.log(list);
+	console.log("The longest word is " + longestWord(list));
+	console.log("--------------------");
+}
 
 
 
