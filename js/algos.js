@@ -40,6 +40,7 @@ function longestWord(list) {
 function compare(object1, object2) {
 	var arr1 = [];
 	var arr2 = [];
+	
 
 }
 
