@@ -26,7 +26,6 @@ function Car(model, year, color) {
 	this.color = color;
 
 	this.rev = function(){console.log("Vroooom Vrooooooom!!!!!");};
-
 }
 
 var newCar = new Car("Ford", 2015, "Red");
