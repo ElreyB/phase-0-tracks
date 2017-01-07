@@ -19,3 +19,15 @@ for (var i = 0; i < names.length; i++) {
 }
 
 console.log(horses);
+
+function Car(model, year, color) {
+	this.model = model;
+	this.year = year;
+	this.color = color;
+
+	this.rev = function(){console.log("Vroooom Vrooooooom!!!!!");};
+
+}
+
+var newCar = new Car("Ford", 2015, "Red");
+console.log(newCar);
