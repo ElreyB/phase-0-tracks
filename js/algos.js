@@ -50,6 +50,7 @@ function compare(object1, object2) {
 	}
 	return false;
 }
+	
 // Release 2
 // Function: takes an integer for length, and builds and returns an 
 //           array of strings of the given length. The words should be 
