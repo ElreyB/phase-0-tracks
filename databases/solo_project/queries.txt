@@ -42,3 +42,45 @@ Delete an item that meets some condition (you can choose a condition that makes 
 	DELETE FROM servers WHERE name="Elrey Belmonti";
 - OUTPUT
 	N/A
+
+JOINS
+From what I can tell this is the syntax for JOIN
+SELECT <table columns; the order you put the columns name is how it will 					output>
+FROM <table name> 
+JOIN <second table name; you can use INNER/LEFT/RIGHT/FULL JOIN or (,) to 			join the tables but seems like extra syntax since you can set the 				order right after the SELECT command>
+ON <where the tables connect>
+Optional: WHERE <conditions>;
+
+Join
+- COMMAND
+	SELECT servers.name, schedules.shift, servers.starting_date
+	FROM servers
+  INNER JOIN schedules 
+	ON servers.schedule_id = schedules.id;
+- OUTPUT
+	Oscar Bartra|Lunch|20160517
+	Chy Spain|Dinner|20160204
+	Cindy Smith|Dinner|20140825
+	April Myers|Morning|20161216
+	Linda Hunter|Lunch|20170112
+
+
+- COMMAND
+	SELECT schedules.shift, servers.name
+	FROM schedules, servers
+	ON servers.schedule_id = schedules.id
+	WHERE schedules.shift = "Dinner";
+- OUTPUT
+	Dinner|Chy Spain
+	Dinner|Cindy Smith
+
+- COMMAND
+	SELECT servers.id, servers.name
+	FROM schedules, servers
+	ON servers.schedule_id = schedules.id
+	WHERE servers.starting_date = 20170112;
+- OUTPUT
+	6|Linda Hunter
+
+
+
