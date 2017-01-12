@@ -1,0 +1,86 @@
+Display the information in one table (either table is fine).
+- COMMAND
+	SELECT * FROM servers;
+- OUTPUT
+	1|Oscar Bartra|2|20160517
+	2|Chy Spain|3|20160204
+	3|Cindy Smith|3|20140825
+	4|Elrey Belmonti|1|20140601
+	5|April Myers|3|20161216
+	6|Linda Hunter|2|20170112
+
+Update an item that meets some condition (you can choose a condition that makes sense).
+- COMMAND
+	UPDATE servers SET schedule_id=1 WHERE name="April Myers";
+- OUTPUT
+	N/A
+
+Display the information in both tables using one query.
+- COMMAND
+	SELECT * FROM servers, schedules WHERE servers.schedule_id = schedules.id;
+- OUTPUT
+	1|Oscar Bartra|2|20160517|2|Lunch
+	2|Chy Spain|3|20160204|3|Dinner
+	3|Cindy Smith|3|20140825|3|Dinner
+	4|Elrey Belmonti|1|20140601|1|Morning
+	5|April Myers|1|20161216|1|Morning
+	6|Linda Hunter|2|20170112|2|Lunch
+
+Display a narrower selection of columns (fewer columns than all of them, in other words) from both tables using one query.
+- COMMAND
+	SELECT servers.name, schedules.shift FROM servers JOIN schedules ON servers.schedule_id = schedules.id;
+- OUTPUT
+	Oscar Bartra|Lunch
+	Chy Spain|Dinner
+	Cindy Smith|Dinner
+	Elrey Belmonti|Morning
+	April Myers|Morning
+	Linda Hunter|Lunch
+
+Delete an item that meets some condition (you can choose a condition that makes sense).
+- COMMAND
+	DELETE FROM servers WHERE name="Elrey Belmonti";
+- OUTPUT
+	N/A
+
+JOINS
+From what I can tell this is the syntax for JOIN
+SELECT <table columns; the order you put the columns name is how it will 					output>
+FROM <table name> 
+JOIN <second table name; you can use INNER/LEFT/RIGHT/FULL JOIN or (,) to 			join the tables but seems like extra syntax since you can set the 				order right after the SELECT command>
+ON <where the tables connect>
+Optional: WHERE <conditions>;
+
+Join
+- COMMAND
+	SELECT servers.name, schedules.shift, servers.starting_date
+	FROM servers
+  INNER JOIN schedules 
+	ON servers.schedule_id = schedules.id;
+- OUTPUT
+	Oscar Bartra|Lunch|20160517
+	Chy Spain|Dinner|20160204
+	Cindy Smith|Dinner|20140825
+	April Myers|Morning|20161216
+	Linda Hunter|Lunch|20170112
+
+
+- COMMAND
+	SELECT schedules.shift, servers.name
+	FROM schedules, servers
+	ON servers.schedule_id = schedules.id
+	WHERE schedules.shift = "Dinner";
+- OUTPUT
+	Dinner|Chy Spain
+	Dinner|Cindy Smith
+
+- COMMAND
+	SELECT servers.id, servers.name
+	FROM schedules, servers
+	ON servers.schedule_id = schedules.id
+	WHERE servers.starting_date = 20170112;
+- OUTPUT
+	6|Linda Hunter
+
+
+
