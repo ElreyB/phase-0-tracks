@@ -1,13 +1,42 @@
 You've joined two tables before. How do you join three?
 - COMMAND
-	SELECT
-	
+	SELECT *
+	FROM users
+	INNER JOIN reviews ON reviews.user_id = users.id
+	INNER JOIN businesses ON reviews.business_id = businesses.id;
+
 - OUTPUT
+	1|Bradford|Pitt|1|5|Great food!|1|1|1|Grundy Hollow Wedding Chapel
+	3|Angela|Jolie|2|3|Not the best but not the worst sushi I ever had.|6|3|6|Sushi World
+	7|Denzel|George|3|4|Good classes. The teachers really care|4|7|4|Lotus Yoga
+	5|Holly|Berry|4|5|HAD SUCH A BLAST!!!!!!!|3|5|3|The Beagle Nightclub
+	3|Angela|Jolie|5|1|A totally scam of a business. You are better off hitchhiking then getting these guys to tow your car|2|3|2|Amir's Towing
+	6|Merryl|Streepman|6|100000|Thank you, thank you, thank you people at Grundy Hollow Wedding Chapel|1|6|1|Grundy Hollow Wedding Chapel
+	5|Holly|Berry|7|0|They didn't even show up when they said they would|5|5|5|Plumbing by Janet
 
 There are some repetitive columns if we choose to view all fields. Choose instead to just view the user's names, the business name, the star rating, and the comment.
 - COMMAND
+	SELECT users.first_name, users.last_name, businesses.name, reviews.stars, reviews.comment
+	FROM users
+	INNER JOIN reviews ON reviews.user_id = users.id
+	INNER JOIN businesses ON reviews.business_id = businesses.id;
+
 - OUTPUT
+	Bradford|Pitt|Grundy Hollow Wedding Chapel|5|Great food!
+	Angela|Jolie|Sushi World|3|Not the best but not the worst sushi I ever had.
+	Denzel|George|Lotus Yoga|4|Good classes. The teachers really care
+	Holly|Berry|The Beagle Nightclub|5|HAD SUCH A BLAST!!!!!!!
+	Angela|Jolie|Amir's Towing|1|A totally scam of a business. You are better off hitchhiking then getting these guys to tow your car
+	Merryl|Streepman|Grundy Hollow Wedding Chapel|100000|Thank you, thank you, thank you people at Grundy Hollow Wedding Chapel
+	Holly|Berry|Plumbing by Janet|0|They didn't even show up when they said they would
 
 How do you view the data of all three tables for just one particular business?
 - COMMAND
+	SELECT *
+	FROM businesses
+	INNER JOIN reviews ON reviews.business_id = businesses.id
+	INNER JOIN users ON reviews.user_id = users.id
+	WHERE businesses.name = "Lotus Yoga";
+
 - OUTPUT
+	4|Lotus Yoga|3|4|Good classes. The teachers really care|4|7|7|Denzel|George
