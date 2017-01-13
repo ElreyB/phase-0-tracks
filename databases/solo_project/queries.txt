@@ -45,9 +45,9 @@ Delete an item that meets some condition (you can choose a condition that makes 
 
 JOINS
 From what I can tell this is the syntax for JOIN
-SELECT <table columns; the order you put the columns name is how it will 					output>
+SELECT <table columns; the order you put the columns name is how it will output>
 FROM <table name> 
-JOIN <second table name; you can use INNER/LEFT/RIGHT/FULL JOIN or (,) to 			join the tables but seems like extra syntax since you can set the 				order right after the SELECT command>
+JOIN <second table name; you can use INNER/LEFT/RIGHT/FULL JOIN (explicit JOINs) or (,) (implicit JOIN) to join the tables>
 ON <where the tables connect>
 Optional: WHERE <conditions>;
 
