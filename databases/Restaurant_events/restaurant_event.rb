@@ -3,10 +3,10 @@
 # require gems that are needed
 require 'sqlite3'
 # create SQLite3 database
-events_dbs = SQLite3::Database.new("events.db")
+db = SQLite3::Database.new("restaurant_events.db")
 
 # create schema tables with fancy string delimiters
-create_tables = <<-SQL
+create_table_guests = <<-SQL
 	CREATE TABLE IF NOT EXISTS guests(
 		id INTEGER PRIMARY KEY,
 		full_name VARCHAR(255),
@@ -14,9 +14,9 @@ create_tables = <<-SQL
 		contact_number INT
 	)
 SQL
-events_dbs.execute(create_tables)
+db.execute(create_table_guests)
 
-events_dbs.execute <<-SQL
+db.execute <<-SQL
 	CREATE TABLE IF NOT EXISTS occasions(
 		id INTEGER PRIMARY KEY,
 		name VARCHAR(255)
