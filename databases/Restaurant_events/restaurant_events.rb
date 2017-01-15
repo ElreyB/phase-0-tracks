@@ -31,6 +31,17 @@ create_table_occasions = <<-SQL
 	);
 SQL
 db.execute(create_table_occasions)
+
+create_table_events = <<-SQL
+	CREATE TABLE IF NOT EXISTS events(
+		id INTEGER PRIMARY KEY,
+		guest_id INT,
+		occasion_id INT,
+		event_id INT,
+		dates DATETIME
+	);
+SQL
+db.execute(create_table_events)
 # Business code
 
 # Method: Adds guest to guest table
