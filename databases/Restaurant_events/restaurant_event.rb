@@ -1,8 +1,9 @@
 # Restaurant Events
 
 # require gems that are needed
-
+require 'SQLite3'
 # create SQLite3 database
+events_dbs = SQLite3::Database.new("events.db")
 
 # create schema tables with fancy string delimiters
 
@@ -43,4 +44,5 @@
 	# or
 	# Show one event
 # End program
+
 # Driver code
