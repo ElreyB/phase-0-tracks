@@ -1,12 +1,20 @@
 # Restaurant Events
 
 # require gems that are needed
-require 'SQLite3'
+require 'sqlite3'
 # create SQLite3 database
 events_dbs = SQLite3::Database.new("events.db")
 
 # create schema tables with fancy string delimiters
-
+create_table_guests = <<-SQL
+	CREATE TABLE IF NOT EXISTS guests(
+		id INTEGER PRIMARY KEY,
+		full_name VARCHAR(255),
+		email VARCHAR(320),
+		contact_number INT
+	)
+SQL
+events_dbs.execute(create_table_guests)
 # Business code
 
 # Method: Adds guest to guest table
