@@ -12,7 +12,7 @@ create_table_guests = <<-SQL
 		full_name VARCHAR(255),
 		email VARCHAR(320),
 		contact_number INT
-	)
+	);
 SQL
 db.execute(create_table_guests)
 
@@ -20,7 +20,13 @@ db.execute <<-SQL
 	CREATE TABLE IF NOT EXISTS occasions(
 		id INTEGER PRIMARY KEY,
 		name VARCHAR(255)
-	)
+	);
+SQL
+db.execute <<-SQL
+	CREATE TABLE IF NOT EXISTS types(
+		id INTEGER PRIMARY KEY,
+		name VARCHAR(255)
+	);
 SQL
 # Business code
 
