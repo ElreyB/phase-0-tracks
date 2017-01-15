@@ -16,18 +16,21 @@ create_table_guests = <<-SQL
 SQL
 db.execute(create_table_guests)
 
-db.execute <<-SQL
-	CREATE TABLE IF NOT EXISTS occasions(
-		id INTEGER PRIMARY KEY,
-		name VARCHAR(255)
-	);
-SQL
-db.execute <<-SQL
+create_table_types = <<-SQL
 	CREATE TABLE IF NOT EXISTS types(
 		id INTEGER PRIMARY KEY,
 		name VARCHAR(255)
 	);
 SQL
+db.execute(create_table_types)
+
+create_table_occasions = <<-SQL
+	CREATE TABLE IF NOT EXISTS occasions(
+		id INTEGER PRIMARY KEY,
+		name VARCHAR(255)
+	);
+SQL
+db.execute(create_table_occasions)
 # Business code
 
 # Method: Adds guest to guest table
