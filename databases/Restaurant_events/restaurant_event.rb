@@ -6,7 +6,7 @@ require 'sqlite3'
 events_dbs = SQLite3::Database.new("events.db")
 
 # create schema tables with fancy string delimiters
-create_table_guests = <<-SQL
+create_tables = <<-SQL
 	CREATE TABLE IF NOT EXISTS guests(
 		id INTEGER PRIMARY KEY,
 		full_name VARCHAR(255),
@@ -14,7 +14,14 @@ create_table_guests = <<-SQL
 		contact_number INT
 	)
 SQL
-events_dbs.execute(create_table_guests)
+events_dbs.execute(create_tables)
+
+events_dbs.execute <<-SQL
+	CREATE TABLE IF NOT EXISTS occasions(
+		id INTEGER PRIMARY KEY,
+		name VARCHAR(255)
+	)
+SQL
 # Business code
 
 # Method: Adds guest to guest table
