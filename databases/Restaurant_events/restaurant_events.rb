@@ -85,6 +85,31 @@ end
 
 # Interface
 # Introduce event program
+puts "Welcome to your Events Database Program Setup"
+puts "Let's get start........"
+puts "Enter the type of occasions you have at you establishment one at a time." 
+puts "Example: Birthday, Anniversary, etc."
+puts "Type 'done' when finish."
+puts "What type of occasions do you have at your establishment?"
+occasion_input = ""
+establish_occasions = []
+while occasion_input != "done"
+	occasion_input = gets.chomp.downcase
+	if occasion_input == "done"
+		break
+	else
+		establish_occasions.push(occasion_input)
+		establish_occasions
+	end	
+end
+establish_occasions.each do |occasion|
+	add_occasion(db, occasion)
+end
+ p occasion_input
+ p establish_occasions
+
+
+
 # Ask how many events they wish to add to database
 # loop until done
 # Ask for guests full name
