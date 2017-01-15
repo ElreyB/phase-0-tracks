@@ -45,10 +45,13 @@ db.execute(create_table_events)
 # Business code
 
 # Method: Adds guest to guest table
-# input: full name ----> string
+# input: db, full name, email, contact number ---> db, string, string, integer
 # steps: inserts name into guests table
 # output: N/A
-
+def add_guest(db, full_name, email, contact_number)
+	db.execute("INSERT INTO guests (full_name, email, contact_number) 
+		VALUES (?,?,?)", [full_name, email, contact_number])
+end
 # Method: Adds occasion to occasions table
 # input: type of occasion ------> string
 # steps: inserts occasion type into occasions table
@@ -81,3 +84,4 @@ db.execute(create_table_events)
 # End program
 
 # Driver code
+add_guest(db, "Elrey Belmonti", "shdidjei@yahoo.com", 1111111111)
