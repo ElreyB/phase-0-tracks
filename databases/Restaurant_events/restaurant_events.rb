@@ -56,6 +56,11 @@ end
 # input: type of occasion ------> string
 # steps: inserts occasion type into occasions table
 # output: N/A
+def add_occasion(db, occasion)
+	db.execute("INSERT INTO occasions (name)
+		VALUES (?)", [occasion])
+end
+add_occasion(db, "birthday")
 
 # Method: Adds event type to types table
 # input: event type ------->string
