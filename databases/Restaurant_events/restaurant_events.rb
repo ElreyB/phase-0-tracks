@@ -70,12 +70,16 @@ def add_type(db, type)
 	db.execute("INSERT INTO types (name)
 		VALUES (?)", [type])
 end
-add_type(db, "private")
+
 # Method: Adds event information to events table
 # input: guest_id ---> integer, occasion_id ---> integer, type_id ---> integer
 			   # datetime ---> string 
 # steps: inserts information into events table
 # output: N/A
+def add_event(db, guest_id, occasion_id, event_id, date_time)
+	db.execute("INSERT INTO events (guest_id, occasion_id, event_id, dates)
+		VALUES (?,?,?,?)", [guest_id, occasion_id, event_id, date_time])
+end
 
 
 
@@ -95,3 +99,7 @@ add_type(db, "private")
 # Driver code
 # add_guest(db, "Elrey Belmonti", "shdidjei@yahoo.com", 1111111111)
 # add_occasion(db, "birthday")
+# add_type(db, "private")
+# add_event(db,1, 1, 1, "01-22-2016 15:07")
+
+
