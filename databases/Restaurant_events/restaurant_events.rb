@@ -85,30 +85,46 @@ end
 
 # Interface
 # Introduce event program
-puts "Welcome to your Events Database Program Setup"
+puts "Welcome to your Events Database Program Setup tutorial."
 puts "Let's get start........"
 puts "Enter the type of occasions you have at you establishment one at a time." 
 puts "Example: Birthday, Anniversary, etc."
 puts "Type 'done' when finish."
 puts "What type of occasions do you have at your establishment?"
-occasion_input = ""
-establish_occasions = []
-while occasion_input != "done"
-	occasion_input = gets.chomp.downcase
-	if occasion_input == "done"
-		break
-	else
-		establish_occasions.push(occasion_input)
-		establish_occasions
-	end	
-end
-establish_occasions.each do |occasion|
-	add_occasion(db, occasion)
-end
- p occasion_input
- p establish_occasions
+	occasion_input = ""
+	establish_occasions = []
+		while occasion_input != "done"
+			occasion_input = gets.chomp.downcase
+			if occasion_input == "done"
+				break
+			else
+				establish_occasions.push(occasion_input)
+				establish_occasions
+			end	
+		end
 
+	establish_occasions.each do |occasion|
+		add_occasion(db, occasion)
+	end
 
+puts "Enter the event type you have at you establishment one at a time." 
+puts "Example: Private, Semi_private, etc."
+puts "Type 'done' when finish."
+puts "What event type do you have at your establishment?"
+	type_input = ""
+	establish_types = []
+		while type_input != "done"
+			type_input = gets.chomp.downcase
+			if type_input == "done"
+				break
+			else
+				establish_types.push(type_input)
+			end
+		end
+
+	establish_types.each do |type|
+		add_type(db, type)
+	end
 
 # Ask how many events they wish to add to database
 # loop until done
@@ -126,5 +142,9 @@ end
 # add_occasion(db, "birthday")
 # add_type(db, "private")
 # add_event(db,1, 1, 1, "01-22-2016 15:07")
+# p occasion_input
+# p establish_occasions
+# p type_input
+# p establish_types
 
 
