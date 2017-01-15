@@ -1,6 +1,6 @@
 # Restaurant Events
 
-# require gems if needed
+# require gems that are needed
 
 # create SQLite3 database
 
@@ -37,7 +37,7 @@
 # loop until done
 # Ask for guests full name
 # Ask for guest's event occasion
-# Ask for dat and time of event
+# Ask for date and time of event
 # Ask if they was to see full list of events or just one event
 	# Show events in a user friendly way
 	# or
