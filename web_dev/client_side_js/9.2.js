@@ -1,3 +1,5 @@
+// 9.2 Ally and Elrey
+
 // console.log("The script is running!");
 
 // function addPinkBorder(event) {
@@ -23,5 +25,12 @@ function addFontChange() {
 	var grumpy = tag[0];
 	grumpy.style.fontSize = "3em";
 }
-
 addFontChange();
+
+function addHover(event) {
+	event.target.onmouseover = "red";
+}
+
+var buttons = document.getElementsByTagName("button");
+var button = buttons[0]
+button.addEventListener("onmouseover", addHover);
