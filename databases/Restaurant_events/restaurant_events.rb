@@ -237,6 +237,3 @@ puts "But for now let's not worry about that."
 puts "We will save that for another day."
 puts "Great Job! 😀"
 # End program
-
-
-
