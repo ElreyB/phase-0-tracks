@@ -25,3 +25,15 @@ VPS can operate on many different operating systems
 Optional bonus question: Why is it considered a bad idea to run programs as the root user on a Linux system?
 
 It seem it is a huge security risk. You can destroy your system from vulnerabilities from other programs for instance.
+
+DOM properties of an HTML
+accessKey
+blur
+contentEditavles
+onkeyup
+className
+click
+draggable
+lastElementChild
+namespaceURI
+nodeNmae
