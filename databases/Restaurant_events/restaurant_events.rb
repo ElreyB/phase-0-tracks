@@ -1,12 +1,9 @@
-# Restaurant Events
-
-# require gems that are needed
+# Event Database Program Setup tutorial
 require 'sqlite3'
-# create SQLite3 database
+
 db = SQLite3::Database.new("restaurant_events.db")
 db.results_as_hash = true
 
-# create schema tables with fancy string delimiters
 create_table_guests = <<-SQL
 	CREATE TABLE IF NOT EXISTS guests(
 		id INTEGER PRIMARY KEY,
@@ -43,40 +40,23 @@ create_table_events = <<-SQL
 	);
 SQL
 db.execute(create_table_events)
-# Business code
 
-# Method: Adds guest to guest table
-# input: db, full name, email, contact number ---> db, string, string, integer
-# steps: inserts name into guests table
-# output: N/A
+# Business code
 def add_guest(db, full_name, email, contact_number)
 	db.execute("INSERT INTO guests (full_name, email, contact_number) 
 		VALUES (?,?,?)", [full_name, email, contact_number])
 end
-# Method: Adds occasion to occasions table
-# input: type of occasion ------> string
-# steps: inserts occasion type into occasions table
-# output: N/A
+
 def add_occasion(db, occasion)
 	db.execute("INSERT INTO occasions (theme)
 		VALUES (?)", [occasion])
 end
 
-
-# Method: Adds event type to types table
-# input: event type ------->string
-# steps: inserts event type into types table
-# output: N/A
 def add_type(db, type)
 	db.execute("INSERT INTO types (name)
 		VALUES (?)", [type])
 end
 
-# Method: Adds event information to events table
-# input: guest_id ---> integer, occasion_id ---> integer, type_id ---> integer
-			   # datetime ---> string 
-# steps: inserts information into events table
-# output: N/A
 def add_event(db, guest_id, occasion_id, type_id, date_time)
 	db.execute("INSERT INTO events (guest_id, occasion_id, type_id, dates)
 		VALUES (?,?,?,?)", [guest_id, occasion_id, type_id, date_time])
@@ -84,7 +64,6 @@ end
 
 
 # Interface
-# Introduce event program
 puts "Welcome to your Events Database Program Setup tutorial."
 puts "Let's get start........"
 puts "Let us setup your database for the types of occasions you have at you establishment."
@@ -257,27 +236,7 @@ end
 puts "But for now let's not worry about that."
 puts "We will save that for another day."
 puts "Great Job! 😀"
-
-
-# Ask how many events they wish to add to database
-# loop until done
-# Ask for guests full name
-# Ask for guest's event occasion
-# Ask for date and time of event
-# Ask if they was to see full list of events or just one event
-	# Show events in a user friendly way
-	# or
-	# Show one event
 # End program
 
-# Driver code
-# add_guest(db, "Elrey Belmonti", "shdidjei@yahoo.com", 1111111111)
-# add_occasion(db, "birthday")
-# add_type(db, "private")
-# add_event(db,1, 1, 1, "01-22-2016 15:07")
-# p occasion_input
-# p establish_occasions
-# p type_input
-# p establish_types
 
 
