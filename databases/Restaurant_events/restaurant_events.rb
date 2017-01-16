@@ -38,7 +38,7 @@ create_table_events = <<-SQL
 		id INTEGER PRIMARY KEY,
 		guest_id INT,
 		occasion_id INT,
-		event_id INT,
+		type_id INT,
 		dates DATETIME
 	);
 SQL
@@ -77,11 +77,10 @@ end
 			   # datetime ---> string 
 # steps: inserts information into events table
 # output: N/A
-def add_event(db, guest_id, occasion_id, event_id, date_time)
-	db.execute("INSERT INTO events (guest_id, occasion_id, event_id, dates)
-		VALUES (?,?,?,?)", [guest_id, occasion_id, event_id, date_time])
+def add_event(db, guest_id, occasion_id, type_id, date_time)
+	db.execute("INSERT INTO events (guest_id, occasion_id, type_id, dates)
+		VALUES (?,?,?,?)", [guest_id, occasion_id, type_id, date_time])
 end
-
 
 
 # Interface
@@ -118,6 +117,7 @@ occasion_list = db.execute("SELECT * FROM occasions")
 occasion_list.each do |occasion|
 	puts "#{occasion['id']}" + " | " + "#{occasion['name']}"
 end
+puts "================================================="
 puts "Notice that every entry you make with have a unique number assign to it."
 puts "Don't worry about this now but know you will use this unique number later."
 puts "\n"
@@ -165,9 +165,12 @@ puts "How many guests will you enter today?"
 		puts "What is the guest's contact number?"
 		print "Contact number: \n"
 		contact_number = gets.chomp.to_i
-		guests_list = [add_guest(db, full_name, email, contact_number)]
+		guests_list = full_name, email, contact_number
 		establish_guests.push(guests_list)
 	amount_of_guests -= 1
+	end
+	establish_guests.each do |events|
+		add_guest(db, full_name, email, contact_number)
 	end
 puts "\n"
 puts "Now it is time to combine the data to make a compelet events database."
@@ -198,33 +201,55 @@ puts "How many events are you entering?"
 		occasion_id = gets.chomp.to_i
 		puts "What is the event id?"
 		print "Event id: \n"
-		event_id = gets.chomp.to_i
+		type_id = gets.chomp.to_i
 		puts "What is the date and time of event?"
 		print "Date and time: \n"
 		date_time = gets.chomp.to_s
-		events_list = [add_event(db, guest_id, occasion_id, event_id, date_time)]
+		events_list = guest_id, occasion_id, type_id, date_time
 		establish_events.push(events_list)
 	amount_of_events -= 1
 	end
+	establish_events.each do |events|
+		add_event(db, guest_id, occasion_id, type_id, date_time)
+	end
 puts "Let take a look at the events database."
+puts "================================================="
 puts "Events"
 puts "-----------"
-# establish_events.each do |event|
+events_list = db.execute("SELECT * FROM events")
+events_list.each do |event|
+	event_table = "#{event['guest_id']}"
+	event_table += " | " 
+	event_table += "#{event['occasion_id']}"
+	event_table += " | " 
+	event_table += "#{event['type_id']}"
+	event_table += " | "
+	event_table += "#{event['dates']}"
+	puts event_table 
+end
+puts "================================================="
+puts "I know table is a little hard to understand right now but"
+puts "later on we it will look more user friendly."
+puts "Like this:"
 
-# 	# out = "#{event['guest_id'].to_i}"
-# 	# out += " | " 
-# 	# out += "#{event['occasion_id']}"
-# 	# out += " | " 
-# 	# out += "#{event['event_id']}"
-# 	# out += " | "
-# 	# out += "#{event['dates']}."
-# 	# puts out 
-# end
-p establish_events
+ 
+full_list = db.execute("SELECT
+	guests.full_name,
+	occasions.name,
+	types.name,
+	events.dates
+	FROM guests
+	INNER JOIN events ON events.guest_id = guests.id
+	INNER JOIN occasions ON events.occasion_id = occasions.id
+	INNER JOIN types ON events.type_id = types.id")
 
-
-
-
+full_list.each do |items|
+	full_table = "#{items['full_name']}"
+	full_table += "#{items['name']}"
+	full_table += "#{items['name']}"
+	full_table += "#{items['dates']}"
+	puts full_table
+end
 
 
 # Ask how many events they wish to add to database
