@@ -206,7 +206,21 @@ puts "How many events are you entering?"
 		establish_events.push(events_list)
 	amount_of_events -= 1
 	end
+puts "Let take a look at the events database."
+puts "Events"
+puts "-----------"
+# establish_events.each do |event|
 
+# 	# out = "#{event['guest_id'].to_i}"
+# 	# out += " | " 
+# 	# out += "#{event['occasion_id']}"
+# 	# out += " | " 
+# 	# out += "#{event['event_id']}"
+# 	# out += " | "
+# 	# out += "#{event['dates']}."
+# 	# puts out 
+# end
+p establish_events
 
 
 
