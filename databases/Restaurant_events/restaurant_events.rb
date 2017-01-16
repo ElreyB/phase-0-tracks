@@ -245,10 +245,14 @@ full_list = db.execute("SELECT
 
 full_list.each do |items|
 	full_table = "#{items['full_name']}"
+	full_table += " | " 
 	full_table += "#{items['name']}"
+	full_table += " | " 
 	full_table += "#{items['name']}"
+	full_table += " | " 
 	full_table += "#{items['dates']}"
 	puts full_table
+
 end
 
 
