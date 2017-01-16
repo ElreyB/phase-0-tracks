@@ -28,7 +28,7 @@ db.execute(create_table_types)
 create_table_occasions = <<-SQL
 	CREATE TABLE IF NOT EXISTS occasions(
 		id INTEGER PRIMARY KEY,
-		name VARCHAR(255)
+		theme VARCHAR(255)
 	);
 SQL
 db.execute(create_table_occasions)
@@ -58,7 +58,7 @@ end
 # steps: inserts occasion type into occasions table
 # output: N/A
 def add_occasion(db, occasion)
-	db.execute("INSERT INTO occasions (name)
+	db.execute("INSERT INTO occasions (theme)
 		VALUES (?)", [occasion])
 end
 
@@ -88,7 +88,7 @@ end
 puts "Welcome to your Events Database Program Setup tutorial."
 puts "Let's get start........"
 puts "Let us setup your database for the types of occasions you have at you establishment."
-puts "Enter the type of occasions you have at you establishment one at a time." 
+puts "Enter the theme of occasions you have at you establishment one at a time." 
 puts "Example: Birthday, Anniversary, etc."
 puts "Type 'done' when finish."
 puts "\n"
@@ -115,7 +115,7 @@ puts "Occasions"
 puts "-----------"
 occasion_list = db.execute("SELECT * FROM occasions")
 occasion_list.each do |occasion|
-	puts "#{occasion['id']}" + " | " + "#{occasion['name']}"
+	puts "#{occasion['id']}" + " | " + "#{occasion['theme']}"
 end
 puts "================================================="
 puts "Notice that every entry you make with have a unique number assign to it."
@@ -177,7 +177,7 @@ puts "Now it is time to combine the data to make a compelet events database."
 puts "Remember those unique ids from before:"
 occasion_list = db.execute("SELECT * FROM occasions")
 occasion_list.each do |occasion|
-	puts "#{occasion['id']}" + " | " + "#{occasion['name']}"
+	puts "#{occasion['id']}" + " | " + "#{occasion['theme']}"
 end
 puts "We will be entering those ids in our events database allow with a date and time of event."
 puts "It will look wired are first but in later tutorials this part will have more of 'user friendly' look it."
@@ -235,7 +235,7 @@ puts "Like this:"
  
 full_list = db.execute("SELECT
 	guests.full_name,
-	occasions.name,
+	occasions.theme,
 	types.name,
 	events.dates
 	FROM guests
@@ -246,14 +246,17 @@ full_list = db.execute("SELECT
 full_list.each do |items|
 	full_table = "#{items['full_name']}"
 	full_table += " | " 
-	full_table += "#{items['name']}"
+	full_table += "#{items['theme']}"
 	full_table += " | " 
 	full_table += "#{items['name']}"
 	full_table += " | " 
 	full_table += "#{items['dates']}"
 	puts full_table
-
 end
+
+puts "But for now let's not worry about that."
+puts "We will save that for another day."
+puts "Great Job! 😀"
 
 
 # Ask how many events they wish to add to database
