@@ -27,10 +27,20 @@ function addFontChange() {
 }
 addFontChange();
 
-function addHover(event) {
-	event.target.onmouseover = "red";
-}
+console.log("The script is running!");
 
-var buttons = document.getElementsByTagName("button");
-var button = buttons[0]
-button.addEventListener("onmouseover", addHover);
+function addHover(event) {
+	console.log("click happened.")
+	console.log(event)
+	event.target.style.fontStyle = "italic";
+}
+var great = document.getElementById("strong");
+
+great.addEventListener("mouseover", addHover);
+
+function addMouseOut(event) {
+	event.target.style.fontStyle = "normal";
+}
+great.addEventListener("mouseout", addMouseOut);
+
+
