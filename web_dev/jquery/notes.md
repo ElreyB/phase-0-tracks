@@ -16,5 +16,21 @@ I really like this book. I am not a big reader but this book format is really go
 
 Take a break a the 30min mark - usaully with something really new, the 30min break point helps reset my brain.
 
+Effectivness:
+Videos
+It turns out that I had already subscribed to LearnCode.academy on youtube. I really like it because they are short, detial, and the host is fun to listen to.
+
+Sites
+SoloLearn - just as i thought it would this site was really good at going over the basics. You feel accomplished when you are able to take the test and past without looking back or looking things up. It is set up really well.
+
+TreeHouse - they did not have a jQuery track
+
+jQuery tutorial websites - I found a couple docs and bookmark them.
+
+Read - I really like this book a look. It is great to referrence to and is set up in a way that really appeals to me.
+
+take breaks - it is always good to take breaks when learning soemthing. I am not really good at remember when I don't take breaks. I end up mixing things up in my head if I don't of just for get to eat or use the bathroom sometimes. Also, without breaks I get really antsy. instead of learning I jsut want to get throught things without really learning anything.
+
+
 
 
