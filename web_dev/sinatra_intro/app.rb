@@ -44,3 +44,41 @@ get '/students/:id' do
   student = db.execute("SELECT * FROM students WHERE id=?", [params[:id]])[0]
   student.to_s
 end
+
+# A /contact route that displays an address (you can make up the address).
+get '/contact' do
+  "1020 University St. apt. 304 Seattle, WA. 98101"
+end
+
+# A /great_job route that can take a person's name as a query parameter (not a route parameter) and say "Good job,
+# [person's name]!". If the query parameter is not present, the route simply says "Good job!"
+get '/great_job' do 
+  name = params[:name]
+  if name
+    "Good job, #{params[:name]}!"
+  else
+    "Good job!"
+  end
+end
+
+# A route that uses route parameters to add two numbers and respond with the result. 
+# The data types are tricky here -- when will the data need to be (or arrive as) a string?
+
+get '/add/:num_1/:num_2' do
+  num_1 = params[:num_1]
+  num_2 = params[:num_2]
+  sum = num_1.to_i + num_2.to_i  
+  "#{num_1.to_s} plus #{num_2.to_s} is " + sum.to_s + "."
+end
+
+# Research on your own
+# Is Sinatra the only web app library in Ruby? What are some others?
+# Ruby on Rails, Grape, Camping, Hanami, Ramaze.
+
+# Are SQLite and the sqlite3 gem your only options for using a database with Sinatra? 
+# What are some others?
+# Sequel, mysql, postgres
+
+# What is meant by the term web stack?
+# Web stack is the collection of software required for Web development.
+
