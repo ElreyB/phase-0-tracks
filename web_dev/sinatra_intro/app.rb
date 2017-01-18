@@ -70,3 +70,15 @@ get '/add/:num_1/:num_2' do
   sum = num_1.to_i + num_2.to_i  
   "#{num_1.to_s} plus #{num_2.to_s} is " + sum.to_s + "."
 end
+
+# Research on your own
+# Is Sinatra the only web app library in Ruby? What are some others?
+# Ruby on Rails, Grape, Camping, Hanami, Ramaze.
+
+# Are SQLite and the sqlite3 gem your only options for using a database with Sinatra? 
+# What are some others?
+# Sequel, mysql, postgres
+
+# What is meant by the term web stack?
+# Web stack is the collection of software required for Web development.
+
