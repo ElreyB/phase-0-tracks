@@ -1,3 +1,4 @@
+#Pairing 9.5 Ally and Elrey
 # require gems
 require 'sinatra'
 require 'sqlite3'
@@ -26,6 +27,11 @@ end
 post '/students' do
   db.execute("INSERT INTO students (name, campus, age) VALUES (?,?,?)", [params['name'], params['campus'], params['age'].to_i])
   redirect '/'
+end
+
+post '/comments' do 
+	db.execute("INSERT INTO comments (student_id, comment) VALUES (?,?)", [params['id'], params['comment']])
+	redirect '/'
 end
 
 # add static resources

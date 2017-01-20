@@ -1,3 +1,4 @@
+<!-- Pairing 9.5 Ally and Elrey -->
 <!DOCTYPE html>
 <html>
 <head>
@@ -5,8 +6,12 @@
 </head>
 <body>
 <p>Give any comments to help our school be better!</p>
-<form action="">
-	
+<form action="/comments" method="POST">
+	<input type="text" name="id" placeholder="Student Id">
+	<br><br>
+	<textarea name="comment" cols="30" rows="15">Add comments here</textarea>
+	<br><br>
+	<button type="submit">Submit</button>
 </form>
 
 </body>
